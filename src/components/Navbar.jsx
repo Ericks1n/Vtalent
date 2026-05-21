@@ -20,7 +20,15 @@ export default function Navbar({ onOpenContact }) {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container navbar-container">
         <a href="#" className="logo" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
-          <img src="/logo.png" alt="BALUARTALENT & Co." style={{ height: '42px', objectFit: 'contain' }} />
+          <img 
+            src="/logo.png" 
+            alt="BALUARTALENT & Co." 
+            style={{ 
+              height: scrolled ? '46px' : '56px', 
+              transition: 'height 0.3s ease', 
+              objectFit: 'contain' 
+            }} 
+          />
         </a>
 
         <ul className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>

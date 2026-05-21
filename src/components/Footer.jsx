@@ -22,7 +22,7 @@ export default function Footer({ onOpenContact }) {
           {/* Brand & Description */}
           <div className="footer-brand">
             <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1.5rem' }}>
-              <img src="/logo.png" alt="BALUARTALENT & Co." style={{ height: '38px', objectFit: 'contain' }} />
+              <img src="/logo.png" alt="BALUARTALENT & Co." style={{ height: '52px', objectFit: 'contain' }} />
             </div>
             <p>
               BALUARTALENT & Co. Consultoría Integral es la consultora de Recursos Humanos de referencia en Quito, Ecuador. Potenciamos la productividad y el clima laboral de tu organización con soluciones a la medida.
