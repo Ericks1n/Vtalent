@@ -20,7 +20,7 @@ export default function CtaBanner({ onOpenContact }) {
             <div className="cta-image">
               <img 
                 src="/cta_consulting.png" 
-                alt="Asesoría en Recursos Humanos Vanguard Talent" 
+                alt="Asesoría en Recursos Humanos BALUARTALENT & Co." 
                 loading="lazy"
               />
             </div>

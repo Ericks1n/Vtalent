@@ -12,7 +12,7 @@ export default function Hero({ onOpenContact }) {
           <span className="subtitle">Consultores de Talento Humano en Quito</span>
           <h1>Lideramos el futuro del Talento en Ecuador</h1>
           <p>
-            En Vanguard Talent ayudamos a las empresas a crecer seleccionando, capacitando y potenciando a sus equipos de trabajo. Tu socio estratégico en Recursos Humanos.
+            En BALUARTALENT & Co. ayudamos a las empresas a crecer seleccionando, capacitando y potenciando a sus equipos de trabajo. Tu socio estratégico en Recursos Humanos.
           </p>
           <div className="hero-buttons">
             <button className="btn btn-primary" onClick={onOpenContact}>
@@ -31,7 +31,7 @@ export default function Hero({ onOpenContact }) {
         <div className="hero-image">
           <img 
             src="/hero_recruitment.png" 
-            alt="Vanguard Talent Consultores de Recursos Humanos en Quito" 
+            alt="BALUARTALENT & Co. Consultores de Recursos Humanos en Quito" 
             loading="eager"
           />
         </div>

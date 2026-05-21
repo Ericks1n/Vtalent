@@ -30,8 +30,8 @@ export default function Navbar({ onOpenContact }) {
             <path d="M20 15L50 75L80 15H60L50 50L40 15H20Z" fill="url(#logo-grad)" />
             <path d="M40 15L50 38L60 15H80L50 85L20 15H40Z" fill="url(#logo-grad)" opacity="0.8" />
           </svg>
-          <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.3rem', fontWeight: '800', color: 'var(--text-heading)', letterSpacing: '-0.03em' }}>
-            Vanguard<span style={{ color: 'var(--secondary)' }}>Talent</span>
+          <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem', fontWeight: '800', color: 'var(--text-heading)', letterSpacing: '-0.03em' }}>
+            BALUARTALENT<span style={{ color: 'var(--secondary)', fontSize: '0.9rem', fontWeight: '600', marginLeft: '0.2rem' }}>& Co.</span>
           </span>
         </a>
 
