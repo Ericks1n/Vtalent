@@ -19,20 +19,8 @@ export default function Navbar({ onOpenContact }) {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container navbar-container">
-        <a href="#" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', textDecoration: 'none' }}>
-          <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="var(--primary)" />
-                <stop offset="100%" stopColor="var(--secondary)" />
-              </linearGradient>
-            </defs>
-            <path d="M20 15L50 75L80 15H60L50 50L40 15H20Z" fill="url(#logo-grad)" />
-            <path d="M40 15L50 38L60 15H80L50 85L20 15H40Z" fill="url(#logo-grad)" opacity="0.8" />
-          </svg>
-          <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem', fontWeight: '800', color: 'var(--text-heading)', letterSpacing: '-0.03em' }}>
-            BALUARTALENT<span style={{ color: 'var(--secondary)', fontSize: '0.9rem', fontWeight: '600', marginLeft: '0.2rem' }}>& Co.</span>
-          </span>
+        <a href="#" className="logo" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+          <img src="/logo.png" alt="BALUARTALENT & Co." style={{ height: '42px', objectFit: 'contain' }} />
         </a>
 
         <ul className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>

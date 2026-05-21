@@ -21,20 +21,8 @@ export default function Footer({ onOpenContact }) {
           
           {/* Brand & Description */}
           <div className="footer-brand">
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', marginBottom: '1.5rem' }}>
-              <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <linearGradient id="footer-logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="var(--primary)" />
-                    <stop offset="100%" stopColor="var(--secondary)" />
-                  </linearGradient>
-                </defs>
-                <path d="M20 15L50 75L80 15H60L50 50L40 15H20Z" fill="url(#footer-logo-grad)" />
-                <path d="M40 15L50 38L60 15H80L50 85L20 15H40Z" fill="url(#footer-logo-grad)" opacity="0.8" />
-              </svg>
-              <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.15rem', fontWeight: '800', color: 'var(--text-heading)', letterSpacing: '-0.03em' }}>
-                BALUARTALENT<span style={{ color: 'var(--secondary)', fontSize: '0.85rem', fontWeight: '600', marginLeft: '0.2rem' }}>& Co.</span>
-              </span>
+            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1.5rem' }}>
+              <img src="/logo.png" alt="BALUARTALENT & Co." style={{ height: '38px', objectFit: 'contain' }} />
             </div>
             <p>
               BALUARTALENT & Co. Consultoría Integral es la consultora de Recursos Humanos de referencia en Quito, Ecuador. Potenciamos la productividad y el clima laboral de tu organización con soluciones a la medida.

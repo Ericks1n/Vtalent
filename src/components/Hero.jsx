@@ -30,7 +30,7 @@ export default function Hero({ onOpenContact }) {
 
         <div className="hero-image">
           <img 
-            src="/hero_recruitment.png" 
+            src="/header.png" 
             alt="BALUARTALENT & Co. Consultores de Recursos Humanos en Quito" 
             loading="eager"
           />
