@@ -89,7 +89,7 @@ export default function Footer({ onOpenContact }) {
                 width: '100%'
               }}>
                 <span style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--secondary)' }}></span>
-                Miembro Activo CCQ
+                [Alianza / Afiliación 1]
               </div>
               <div style={{
                 background: 'rgba(30, 64, 175, 0.05)',
@@ -105,7 +105,7 @@ export default function Footer({ onOpenContact }) {
                 width: '100%'
               }}>
                 <span style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--primary)' }}></span>
-                Red Talento Ecuador
+                [Alianza / Afiliación 2]
               </div>
             </div>
           </div>
