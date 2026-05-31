@@ -3,16 +3,45 @@ import React, { useState } from 'react';
 export default function ContactModal({ isOpen, onClose }) {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Simulate API submission
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: '', email: '', phone: '', message: '' });
-      onClose();
-    }, 2500);
+    setLoading(true);
+    setError(null);
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/info@baluartalent.com", {
+        method: "POST",
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          Nombre: formData.name,
+          Email: formData.email,
+          "Teléfono / WhatsApp": formData.phone,
+          Mensaje: formData.message,
+          _subject: "Nuevo lead de contacto - Baluartalent"
+        })
+      });
+      
+      const result = await response.json();
+      if (response.ok && result.success === "true") {
+        setSubmitted(true);
+        setTimeout(() => {
+          setSubmitted(false);
+          setFormData({ name: '', email: '', phone: '', message: '' });
+          onClose();
+        }, 3000);
+      } else {
+        throw new Error(result.message || "Ocurrió un error al enviar el formulario.");
+      }
+    } catch (err) {
+      setError("No se pudo enviar el mensaje. Por favor, intenta de nuevo o escríbenos directamente a info@baluartalent.com.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (!isOpen) return null;
@@ -101,8 +130,18 @@ export default function ContactModal({ isOpen, onClose }) {
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 ></textarea>
               </div>
-              <button type="submit" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
-                Enviar Solicitud
+              {error && (
+                <div style={{ color: '#dc2626', fontSize: '0.85rem', marginBottom: '1rem', fontWeight: '500', textAlign: 'center' }}>
+                  {error}
+                </div>
+              )}
+              <button 
+                type="submit" 
+                className="btn btn-primary" 
+                style={{ width: '100%', justifyContent: 'center' }}
+                disabled={loading}
+              >
+                {loading ? 'Enviando...' : 'Enviar Solicitud'}
               </button>
             </form>
           </>

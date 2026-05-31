@@ -5,14 +5,11 @@ export default function Hero({ onOpenContact }) {
     <header className="hero">
       <div className="container hero-grid">
         <div className="hero-content">
-          <span className="subtitle">Consultores de Talento Humano en Quito</span>
+          <span className="subtitle">Consultores de Talento Humano</span>
           <h1>
             <span className="hero-title-line">SU ALIADO ESTRATÉGICO,</span>
             <span className="hero-title-line">EL BALUARTE DE SU TALENTO</span>
           </h1>
-          <p>
-            Bienvenido a la gestión de Talento de la nueva generación.
-          </p>
           <p>
             BALUARTALENT & Co. ofrece consultoría integral en Talento Humano.
           </p>

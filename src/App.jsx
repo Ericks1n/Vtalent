@@ -3,7 +3,6 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import WhyUs from './components/WhyUs';
-import CtaBanner from './components/CtaBanner';
 import Clients from './components/Clients';
 import Footer from './components/Footer';
 import ContactModal from './components/ContactModal';
@@ -12,6 +11,7 @@ import ContactModal from './components/ContactModal';
 import NuestrosLideres from './components/NuestrosLideres';
 import MisionVision from './components/MisionVision';
 import ValoresCorporativos from './components/ValoresCorporativos';
+import PlanDeAccion from './components/PlanDeAccion';
 
 function App() {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -31,6 +31,9 @@ function App() {
         window.scrollTo({ top: 0, behavior: 'instant' });
       } else if (hash === '#/valores-corporativos') {
         setCurrentView('valores-corporativos');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      } else if (hash === '#/plan-de-accion') {
+        setCurrentView('plan-de-accion');
         window.scrollTo({ top: 0, behavior: 'instant' });
       } else {
         setCurrentView('home');
@@ -60,13 +63,14 @@ function App() {
         return <MisionVision />;
       case 'valores-corporativos':
         return <ValoresCorporativos />;
+      case 'plan-de-accion':
+        return <PlanDeAccion />;
       case 'home':
       default:
         return (
           <>
             <Hero onOpenContact={handleOpenContact} />
             <Services />
-            <CtaBanner onOpenContact={handleOpenContact} />
             <WhyUs />
             <Clients />
           </>

@@ -12,11 +12,8 @@ export default function About() {
         <div className="about-content">
           <span className="section-subtitle">SOBRE NOSOTROS</span>
           <h2 className="about-title">
-            Bienvenido a la gestión de Talento de la nueva generación.
-          </h2>
-          <p className="about-lead">
             Baluartalent & Co. ofrece consultoría integral en Talento Humano.
-          </p>
+          </h2>
           <p className="about-text">
             En Baluartalent & Co. entendemos que el éxito empresarial se fundamenta en las personas. 
             Somos una firma consultora integral especializada en Talento Humano. Alineamos su capital 
