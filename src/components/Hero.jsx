@@ -10,7 +10,7 @@ export default function Hero({ onOpenContact }) {
       <div className="container hero-grid">
         <div className="hero-content">
           <span className="subtitle">Consultores de Talento Humano en Quito</span>
-          <h1>Lideramos el futuro del Talento en Ecuador</h1>
+          <h1>SU ALIADO ESTRATÉGICO, EL BALUARTE DE SU TALENTO</h1>
           <p>
             En BALUARTALENT & Co. ayudamos a las empresas a crecer seleccionando, capacitando y potenciando a sus equipos de trabajo. Tu socio estratégico en Recursos Humanos.
           </p>
