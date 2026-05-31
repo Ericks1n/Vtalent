@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 export default function Navbar({ onOpenContact }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileNosotrosOpen, setMobileNosotrosOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,8 +26,6 @@ export default function Navbar({ onOpenContact }) {
             <span>¿Preguntas?</span>
             <span className="separator">|</span>
             <a href="mailto:info@baluartalent.com">info@baluartalent.com</a>
-            <span className="separator">|</span>
-            <a href="tel:+593999999999">+593 99 999 9999</a>
             <span className="separator">|</span>
             <a href="#como-elegir">FAQ</a>
           </div>
@@ -51,22 +50,40 @@ export default function Navbar({ onOpenContact }) {
           {/* Menú de Navegación Principal */}
           <ul className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>
             <li><a href="#" className="active" onClick={() => setMobileMenuOpen(false)}>INICIO</a></li>
-            <li><a href="#como-elegir" onClick={() => setMobileMenuOpen(false)}>NOSOTROS</a></li>
+            <li className={`nav-item-dropdown ${mobileNosotrosOpen ? 'mobile-open' : ''}`}>
+              <a 
+                href="#nosotros" 
+                onClick={(e) => { 
+                  e.preventDefault(); 
+                  setMobileNosotrosOpen(!mobileNosotrosOpen); 
+                }}
+                className="dropdown-toggle"
+              >
+                NOSOTROS
+                <svg className="dropdown-arrow-icon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: '0.35rem', transition: 'transform 0.3s ease' }}>
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </a>
+              <ul className="dropdown-menu">
+                <li><a href="#/quienes-somos" onClick={() => { setMobileMenuOpen(false); setMobileNosotrosOpen(false); }}>Quiénes somos</a></li>
+                <li><a href="#/nuestros-lideres" onClick={() => { setMobileMenuOpen(false); setMobileNosotrosOpen(false); }}>Nuestros líderes</a></li>
+                <li><a href="#/mision-vision" onClick={() => { setMobileMenuOpen(false); setMobileNosotrosOpen(false); }}>Misión y Visión</a></li>
+                <li><a href="#/valores-corporativos" onClick={() => { setMobileMenuOpen(false); setMobileNosotrosOpen(false); }}>Valores Corporativos</a></li>
+                <li><a href="#/por-que-elegirnos" onClick={() => { setMobileMenuOpen(false); setMobileNosotrosOpen(false); }}>Por qué elegirnos</a></li>
+              </ul>
+            </li>
             <li><a href="#servicios" onClick={() => setMobileMenuOpen(false)}>PORTAFOLIO</a></li>
             <li><a href="#como-elegir" onClick={() => setMobileMenuOpen(false)}>RECURSOS</a></li>
             <li><a href="#blog" onClick={() => setMobileMenuOpen(false)}>BLOG</a></li>
-            <li><a href="#contacto" onClick={(e) => { e.preventDefault(); onOpenContact(); setMobileMenuOpen(false); }}>CONTACTO</a></li>
+            <li><a href="#footer-contacto" onClick={() => setMobileMenuOpen(false)}>CONTACTO</a></li>
             
-            {/* Elementos exclusivos para Móvil en el menú desplegable */}
             <li className="mobile-only-menu-section">
               <span className="mobile-section-title">Nuestros Servicios</span>
               <ul className="mobile-services-list">
-                <li><a href="#servicios" onClick={() => setMobileMenuOpen(false)}>Selección y Reclutamiento</a></li>
-                <li><a href="#servicios" onClick={() => setMobileMenuOpen(false)}>Outsourcing de Nómina</a></li>
-                <li><a href="#servicios" onClick={() => setMobileMenuOpen(false)}>Clima y Desempeño</a></li>
-                <li><a href="#servicios" onClick={() => setMobileMenuOpen(false)}>Capacitación y Desarrollo</a></li>
-                <li><a href="#servicios" onClick={() => setMobileMenuOpen(false)}>Consultoría de Talento</a></li>
-                <li><a href="#servicios" onClick={() => setMobileMenuOpen(false)}>Headhunting</a></li>
+                <li><a href="#servicios" onClick={() => setMobileMenuOpen(false)}>Gestión de Nómina</a></li>
+                <li><a href="#servicios" onClick={() => setMobileMenuOpen(false)}>Capacitación Técnica</a></li>
+                <li><a href="#servicios" onClick={() => setMobileMenuOpen(false)}>Salud Ocupacional</a></li>
+                <li><a href="#servicios" onClick={() => setMobileMenuOpen(false)}>Seguridad Industrial</a></li>
               </ul>
             </li>
 
@@ -74,7 +91,8 @@ export default function Navbar({ onOpenContact }) {
               <span className="mobile-section-title">Contacto Rápido</span>
               <div className="mobile-contact-info">
                 <a href="mailto:info@baluartalent.com" className="mobile-contact-link">info@baluartalent.com</a>
-                <a href="tel:+593999999999" className="mobile-contact-link">+593 99 999 9999</a>
+                <a href="tel:+59323617038" className="mobile-contact-link">Telf: (+593) 2 3617038</a>
+                <a href="tel:+593999452676" className="mobile-contact-link">Cel: 0999452676</a>
               </div>
             </li>
           </ul>
@@ -97,17 +115,13 @@ export default function Navbar({ onOpenContact }) {
       <div className="navbar-bottom-bar">
         <div className="container bottom-bar-container">
           <div className="services-links">
-            <a href="#servicios">SELECCIÓN Y RECLUTAMIENTO</a>
+            <a href="#servicios">GESTIÓN DE NÓMINA</a>
             <span className="bullet">•</span>
-            <a href="#servicios">OUTSOURCING DE NÓMINA</a>
+            <a href="#servicios">CAPACITACIÓN TÉCNICA</a>
             <span className="bullet">•</span>
-            <a href="#servicios">CLIMA Y DESEMPEÑO</a>
+            <a href="#servicios">SALUD OCUPACIONAL</a>
             <span className="bullet">•</span>
-            <a href="#servicios">CAPACITACIÓN Y DESARROLLO</a>
-            <span className="bullet">•</span>
-            <a href="#servicios">CONSULTORÍA DE TALENTO</a>
-            <span className="bullet">•</span>
-            <a href="#servicios">HEADHUNTING</a>
+            <a href="#servicios">SEGURIDAD INDUSTRIAL</a>
           </div>
         </div>
       </div>

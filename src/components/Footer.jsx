@@ -6,9 +6,9 @@ export default function Footer({ onOpenContact }) {
       <div className="container">
         
         {/* Footer Top WhatsApp Banner */}
-        <div className="footer-top">
+        <div id="footer-contacto" className="footer-top">
           <h3>¿Necesitas asesoría en Recursos Humanos? Estamos para ayudarte.</h3>
-          <a href="https://wa.me/593999999999?text=Hola%20BALUARTALENT%20%26%20Co.,%20quisiera%20saber%20más%20sobre%20sus%20servicios%20de%20RRHH" className="btn btn-primary" target="_blank" rel="noopener noreferrer" style={{ background: '#25D366', boxShadow: '0 4px 15px rgba(37, 211, 102, 0.4)' }}>
+          <a href="https://wa.me/593984626222?text=Hola%20BALUARTALENT%20%26%20Co.,%20quisiera%20saber%20más%20sobre%20sus%20servicios%20de%20RRHH" className="btn btn-primary" target="_blank" rel="noopener noreferrer" style={{ background: '#25D366', boxShadow: '0 4px 15px rgba(37, 211, 102, 0.4)' }}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ fill: 'currentColor' }}>
               <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
             </svg>
@@ -52,10 +52,10 @@ export default function Footer({ onOpenContact }) {
             <h4>Enlaces</h4>
             <ul className="footer-links">
               <li><a href="#">Inicio</a></li>
-              <li><a href="#como-elegir">Por Qué Nosotros</a></li>
+              <li><a href="#nosotros">Por Qué Nosotros</a></li>
               <li><a href="#servicios">Servicios</a></li>
               <li><a href="#blog">Blog</a></li>
-              <li><a href="#" onClick={(e) => { e.preventDefault(); onOpenContact(); }}>Contacto</a></li>
+              <li><a href="#footer-contacto">Contacto</a></li>
             </ul>
           </div>
 
@@ -63,51 +63,46 @@ export default function Footer({ onOpenContact }) {
           <div className="footer-column">
             <h4>Servicios</h4>
             <ul className="footer-links">
-              <li><a href="#servicios">Reclutamiento y Selección</a></li>
-              <li><a href="#servicios">Outsourcing de Nómina</a></li>
-              <li><a href="#servicios">Clima y Desempeño</a></li>
-              <li><a href="#servicios">Capacitación y Desarrollo</a></li>
-              <li><a href="#servicios">Consultoría de Talento</a></li>
+              <li><a href="#servicios">Gestión de Nómina</a></li>
+              <li><a href="#servicios">Capacitación Técnica</a></li>
+              <li><a href="#servicios">Salud Ocupacional</a></li>
+              <li><a href="#servicios">Seguridad Industrial</a></li>
             </ul>
           </div>
 
           {/* Column 4: Certifications */}
           <div className="footer-column">
-            <h4>Alianzas y Afiliaciones</h4>
-            <div className="legal-badge" style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', alignItems: 'flex-start' }}>
-              <div style={{
-                background: 'rgba(30, 64, 175, 0.05)',
-                border: '1px solid var(--border-light)',
-                borderRadius: '8px',
-                padding: '0.6rem 0.8rem',
-                fontSize: '0.85rem',
-                color: 'var(--text-main)',
-                fontWeight: '600',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.5rem',
-                width: '100%'
-              }}>
-                <span style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--secondary)' }}></span>
-                [Alianza / Afiliación 1]
-              </div>
-              <div style={{
-                background: 'rgba(30, 64, 175, 0.05)',
-                border: '1px solid var(--border-light)',
-                borderRadius: '8px',
-                padding: '0.6rem 0.8rem',
-                fontSize: '0.85rem',
-                color: 'var(--text-main)',
-                fontWeight: '600',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.5rem',
-                width: '100%'
-              }}>
-                <span style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--primary)' }}></span>
-                [Alianza / Afiliación 2]
-              </div>
-            </div>
+            <h4>Contacto y Ubicación</h4>
+            <ul className="footer-links" style={{ gap: '1rem', marginTop: '1.2rem' }}>
+              <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: '0.2rem', color: 'var(--primary)' }}>
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>
+                  Av. Naciones Unidas E2-30 - entre Iñaquito y Núñez de Vela. Ed. METROPOLITAN, Piso 4, Off. 413.<br/>Quito - Ecuador
+                </span>
+              </li>
+              <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, color: 'var(--secondary)' }}>
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span>Teléf: <a href="tel:+59323617038" style={{ color: 'inherit', fontWeight: '500' }}>(+593) 2 3617038</a></span>
+              </li>
+              <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, color: 'var(--primary)' }}>
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                  <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                </svg>
+                <span>Celular: <a href="tel:+593999452676" style={{ color: 'inherit', fontWeight: '500' }}>0999452676</a></span>
+              </li>
+              <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, color: '#25D366' }}>
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+                <span>WhatsApp: <a href="https://wa.me/593984626222" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', fontWeight: '600' }}>0984626222</a></span>
+              </li>
+            </ul>
           </div>
 
         </div>
