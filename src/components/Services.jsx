@@ -62,7 +62,7 @@ export default function Services() {
                 </div>
               </div>
               <h3 style={{ textAlign: 'center', fontSize: '1.2rem', minHeight: '3.6rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{service.title}</h3>
-              <p style={{ textAlign: 'center', marginTop: '0.8rem' }}>{service.description}</p>
+              <p style={{ marginTop: '0.8rem' }}>{service.description}</p>
             </div>
           ))}
         </div>

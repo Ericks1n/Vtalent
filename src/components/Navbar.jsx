@@ -27,7 +27,7 @@ export default function Navbar({ onOpenContact }) {
             <span className="separator">|</span>
             <a href="mailto:info@baluartalent.com">info@baluartalent.com</a>
             <span className="separator">|</span>
-            <a href="#como-elegir">FAQ</a>
+            <a href="#como-elegir">Por qué elegirnos</a>
           </div>
         </div>
       </div>
@@ -65,16 +65,14 @@ export default function Navbar({ onOpenContact }) {
                 </svg>
               </a>
               <ul className="dropdown-menu">
-                <li><a href="#/quienes-somos" onClick={() => { setMobileMenuOpen(false); setMobileNosotrosOpen(false); }}>Quiénes somos</a></li>
                 <li><a href="#/nuestros-lideres" onClick={() => { setMobileMenuOpen(false); setMobileNosotrosOpen(false); }}>Nuestros líderes</a></li>
                 <li><a href="#/mision-vision" onClick={() => { setMobileMenuOpen(false); setMobileNosotrosOpen(false); }}>Misión y Visión</a></li>
                 <li><a href="#/valores-corporativos" onClick={() => { setMobileMenuOpen(false); setMobileNosotrosOpen(false); }}>Valores Corporativos</a></li>
-                <li><a href="#/por-que-elegirnos" onClick={() => { setMobileMenuOpen(false); setMobileNosotrosOpen(false); }}>Por qué elegirnos</a></li>
               </ul>
             </li>
             <li><a href="#servicios" onClick={() => setMobileMenuOpen(false)}>PORTAFOLIO</a></li>
-            <li><a href="#como-elegir" onClick={() => setMobileMenuOpen(false)}>RECURSOS</a></li>
-            <li><a href="#blog" onClick={() => setMobileMenuOpen(false)}>BLOG</a></li>
+            <li><a href="#como-elegir" onClick={() => setMobileMenuOpen(false)}>POR QUÉ ELEGIRNOS</a></li>
+            <li><a href="#clientes" onClick={() => setMobileMenuOpen(false)}>CLIENTES</a></li>
             <li><a href="#footer-contacto" onClick={() => setMobileMenuOpen(false)}>CONTACTO</a></li>
             
             <li className="mobile-only-menu-section">

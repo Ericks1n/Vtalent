@@ -2,18 +2,16 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
+import WhyUs from './components/WhyUs';
 import CtaBanner from './components/CtaBanner';
-import Accordion from './components/Accordion';
-import Blog from './components/Blog';
+import Clients from './components/Clients';
 import Footer from './components/Footer';
 import ContactModal from './components/ContactModal';
 
 // Subpages
-import QuienesSomos from './components/QuienesSomos';
 import NuestrosLideres from './components/NuestrosLideres';
 import MisionVision from './components/MisionVision';
 import ValoresCorporativos from './components/ValoresCorporativos';
-import PorQueElegirnos from './components/PorQueElegirnos';
 
 function App() {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -25,10 +23,7 @@ function App() {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash;
-      if (hash === '#/quienes-somos') {
-        setCurrentView('quienes-somos');
-        window.scrollTo({ top: 0, behavior: 'instant' });
-      } else if (hash === '#/nuestros-lideres') {
+      if (hash === '#/nuestros-lideres') {
         setCurrentView('nuestros-lideres');
         window.scrollTo({ top: 0, behavior: 'instant' });
       } else if (hash === '#/mision-vision') {
@@ -36,9 +31,6 @@ function App() {
         window.scrollTo({ top: 0, behavior: 'instant' });
       } else if (hash === '#/valores-corporativos') {
         setCurrentView('valores-corporativos');
-        window.scrollTo({ top: 0, behavior: 'instant' });
-      } else if (hash === '#/por-que-elegirnos') {
-        setCurrentView('por-que-elegirnos');
         window.scrollTo({ top: 0, behavior: 'instant' });
       } else {
         setCurrentView('home');
@@ -62,16 +54,12 @@ function App() {
 
   const renderContent = () => {
     switch (currentView) {
-      case 'quienes-somos':
-        return <QuienesSomos />;
       case 'nuestros-lideres':
         return <NuestrosLideres />;
       case 'mision-vision':
         return <MisionVision />;
       case 'valores-corporativos':
         return <ValoresCorporativos />;
-      case 'por-que-elegirnos':
-        return <PorQueElegirnos />;
       case 'home':
       default:
         return (
@@ -79,8 +67,8 @@ function App() {
             <Hero onOpenContact={handleOpenContact} />
             <Services />
             <CtaBanner onOpenContact={handleOpenContact} />
-            <Accordion />
-            <Blog />
+            <WhyUs />
+            <Clients />
           </>
         );
     }

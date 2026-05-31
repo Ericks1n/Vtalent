@@ -3,16 +3,21 @@ import React from 'react';
 export default function Hero({ onOpenContact }) {
   return (
     <header className="hero">
-      {/* Decorative Blur Blobs */}
-      <div className="bg-blob blob-purple"></div>
-      <div className="bg-blob blob-cyan"></div>
-
       <div className="container hero-grid">
         <div className="hero-content">
           <span className="subtitle">Consultores de Talento Humano en Quito</span>
-          <h1>SU ALIADO ESTRATÉGICO, EL BALUARTE DE SU TALENTO</h1>
+          <h1>
+            <span className="hero-title-line">SU ALIADO ESTRATÉGICO,</span>
+            <span className="hero-title-line">EL BALUARTE DE SU TALENTO</span>
+          </h1>
           <p>
-            En BALUARTALENT & Co. ayudamos a las empresas a crecer seleccionando, capacitando y potenciando a sus equipos de trabajo. Tu socio estratégico en Recursos Humanos.
+            Bienvenido a la gestión de Talento de la nueva generación.
+          </p>
+          <p>
+            BALUARTALENT & Co. ofrece consultoría integral en Talento Humano.
+          </p>
+          <p>
+            En BALUARTALENT & Co. entendemos que el éxito empresarial se fundamenta en las personas. Somos una firma consultora integral especializada en Talento Humano. Alineamos su capital humano con los objetivos del negocio para transformar la gestión de recursos humanos en una ventaja competitiva sostenible, asegurando innovación y resultados medibles.
           </p>
           <div className="hero-buttons">
             <button className="btn btn-primary" onClick={onOpenContact}>
@@ -26,14 +31,6 @@ export default function Hero({ onOpenContact }) {
               Ver Servicios
             </a>
           </div>
-        </div>
-
-        <div className="hero-image">
-          <img 
-            src="/hero_recruitment.png" 
-            alt="BALUARTALENT & Co. Consultores de Recursos Humanos en Quito" 
-            loading="eager"
-          />
         </div>
       </div>
     </header>

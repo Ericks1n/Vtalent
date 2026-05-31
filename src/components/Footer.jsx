@@ -54,7 +54,7 @@ export default function Footer({ onOpenContact }) {
               <li><a href="#">Inicio</a></li>
               <li><a href="#nosotros">Por Qué Nosotros</a></li>
               <li><a href="#servicios">Servicios</a></li>
-              <li><a href="#blog">Blog</a></li>
+              <li><a href="#clientes">Clientes</a></li>
               <li><a href="#footer-contacto">Contacto</a></li>
             </ul>
           </div>
