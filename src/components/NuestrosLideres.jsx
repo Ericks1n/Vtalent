@@ -30,17 +30,19 @@ export default function NuestrosLideres() {
           <div className="leaders-grid">
             {/* Leader 1 */}
             <div className="leader-card">
-              <div className="leader-image-placeholder">
-                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--text-muted)' }}>
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
-                </svg>
+              <div style={{ width: '100%', height: '250px', overflow: 'hidden', borderBottom: '1px solid var(--border-light)' }}>
+                <img 
+                  src="/hector_cevallos.png" 
+                  alt="Hector Cevallos - Asesor Jurídico" 
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%' }} 
+                />
               </div>
               <div className="leader-info">
-                <h3>[Nombre del Líder 1]</h3>
-                <span className="leader-role">Director General</span>
+                <h3>Hector Cevallos</h3>
+                <span className="leader-role">Asesor Jurídico</span>
+                <span className="leader-subtitle">Abogado en Derecho Laboral y Seguridad Social</span>
                 <p className="leader-bio">
-                  Especialista en consultoría organizacional y gestión del cambio con más de 15 años liderando procesos de recursos humanos en la región.
+                  +20 años de experiencia en litigio, consultoría estratégica y representación jurídica integral en el área procesal y Derecho Laboral
                 </p>
               </div>
             </div>
@@ -57,8 +59,9 @@ export default function NuestrosLideres() {
               <div className="leader-info">
                 <h3>Mabel Ramos</h3>
                 <span className="leader-role">Mg. Talento Humano</span>
+                <span className="leader-subtitle">Especialista en Subsistemas de RR.HH.</span>
                 <p className="leader-bio">
-                  Especialista en Talento Humano, experta en la automatización y optimización de los subsistemas de RR.HH.
+                  Experta en la automatización y optimización de los subsistemas y procesos de talento humano.
                 </p>
               </div>
             </div>
@@ -75,26 +78,9 @@ export default function NuestrosLideres() {
               <div className="leader-info">
                 <h3>Jorge Macias</h3>
                 <span className="leader-role">Mg. Talento Humano</span>
+                <span className="leader-subtitle">Especialista en Desarrollo Organizacional</span>
                 <p className="leader-bio">
-                  Especialista en Desarrollo Organizacional, Capacitación Estratégica, Educación continua y Gestión del cambio cultural.
-                </p>
-              </div>
-            </div>
-
-            {/* Leader 4 */}
-            <div className="leader-card">
-              <div style={{ width: '100%', height: '250px', overflow: 'hidden', borderBottom: '1px solid var(--border-light)' }}>
-                <img 
-                  src="/erick_paillacho.png" 
-                  alt="Erick Paillacho - Ing. Tecnología" 
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }} 
-                />
-              </div>
-              <div className="leader-info">
-                <h3>Erick Paillacho</h3>
-                <span className="leader-role">Ing. Tecnología</span>
-                <p className="leader-bio">
-                  Asesor en Optimización de Datos enfocado en eficiencia y rendimiento analítico. Experto en transformar datos crudos en arquitecturas limpias y rápidas.
+                  Experto en capacitación estratégica, educación continua y gestión del cambio cultural.
                 </p>
               </div>
             </div>

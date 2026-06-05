@@ -1851,7 +1851,16 @@ footer {
   letter-spacing: 0.08em;
   color: var(--secondary);
   display: block;
+  margin-bottom: 0.5rem;
+}
+
+.leader-subtitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  display: block;
   margin-bottom: 1rem;
+  line-height: 1.4;
 }
 
 .leader-bio {
