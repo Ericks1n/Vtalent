@@ -115,7 +115,7 @@ export default function Navbar({ onOpenContact }) {
               <div className="mobile-contact-info">
                 <a href="mailto:info@baluartalent.com" className="mobile-contact-link">info@baluartalent.com</a>
                 <a href="tel:+59323617038" className="mobile-contact-link">Telf: (+593) 2 3617038</a>
-                <a href="tel:+593999452676" className="mobile-contact-link">Cel: 0999452676</a>
+                <a href="tel:+593964196795" className="mobile-contact-link">Cel: 0964196795</a>
               </div>
             </li>
           </ul>
