@@ -52,16 +52,16 @@ export default function NuestrosLideres() {
               <div style={{ width: '100%', height: '250px', overflow: 'hidden', borderBottom: '1px solid var(--border-light)' }}>
                 <img 
                   src="/mabel_ramos.png" 
-                  alt="Mabel Ramos - Mg. Talento Humano" 
+                  alt="Mabel Ramos - Consultora Principal" 
                   style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%' }} 
                 />
               </div>
               <div className="leader-info">
                 <h3>Mabel Ramos</h3>
-                <span className="leader-role">Mg. Talento Humano</span>
-                <span className="leader-subtitle">Especialista en Subsistemas de RR.HH.</span>
+                <span className="leader-role">Consultora Principal</span>
+                <span className="leader-subtitle">Máster en Gestión de Talento Humano y Psicología Laboral</span>
                 <p className="leader-bio">
-                  Experta en la automatización y optimización de los subsistemas y procesos de talento humano.
+                  +15 años liderando áreas de Talento en RRHH, Psicología Organizacional y Educación Continua. Experta en digitalización de nómina y certificaciones ISO.
                 </p>
               </div>
             </div>
