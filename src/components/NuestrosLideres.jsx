@@ -71,16 +71,16 @@ export default function NuestrosLideres() {
               <div style={{ width: '100%', height: '250px', overflow: 'hidden', borderBottom: '1px solid var(--border-light)' }}>
                 <img 
                   src="/jorge_macias.png" 
-                  alt="Jorge Macias - Mg. Talento Humano" 
+                  alt="Jorge Macias - Consultor Senior" 
                   style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%' }} 
                 />
               </div>
               <div className="leader-info">
                 <h3>Jorge Macias</h3>
-                <span className="leader-role">Mg. Talento Humano</span>
-                <span className="leader-subtitle">Especialista en Desarrollo Organizacional</span>
+                <span className="leader-role">Consultor Senior</span>
+                <span className="leader-subtitle">Magíster en Administración de Empresas</span>
                 <p className="leader-bio">
-                  Experto en capacitación estratégica, educación continua y gestión del cambio cultural.
+                  +20 años de experiencia en capacitación empresarial. Especialista en estrategias de marketing, gestión de ventas y formación del talento humano.
                 </p>
               </div>
             </div>
