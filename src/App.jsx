@@ -13,6 +13,7 @@ import NuestrosLideres from './components/NuestrosLideres';
 import MisionVision from './components/MisionVision';
 import ValoresCorporativos from './components/ValoresCorporativos';
 import PlanDeAccion from './components/PlanDeAccion';
+import ModeloDesarrollo from './components/ModeloDesarrollo';
 
 function App() {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -35,6 +36,9 @@ function App() {
         window.scrollTo({ top: 0, behavior: 'instant' });
       } else if (hash === '#/plan-de-accion') {
         setCurrentView('plan-de-accion');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      } else if (hash === '#/modelo-de-desarrollo') {
+        setCurrentView('modelo-de-desarrollo');
         window.scrollTo({ top: 0, behavior: 'instant' });
       } else {
         setCurrentView('home');
@@ -66,14 +70,16 @@ function App() {
         return <ValoresCorporativos />;
       case 'plan-de-accion':
         return <PlanDeAccion />;
+      case 'modelo-de-desarrollo':
+        return <ModeloDesarrollo />;
       case 'home':
       default:
         return (
           <>
             <Hero />
+            <WhyUs />
             <AreasDesarrollo />
             <Services />
-            <WhyUs />
             <Clients />
           </>
         );

@@ -52,7 +52,7 @@ export default function Footer() {
               <li><a href="#">Inicio</a></li>
               <li><a href="#nosotros">Por Qué Nosotros</a></li>
               <li><a href="#programas">Programas</a></li>
-              <li><a href="#clientes">Clientes</a></li>
+              <li><a href="#casos-de-exito">Casos de Éxito</a></li>
               <li><a href="#footer-contacto">Contacto</a></li>
             </ul>
           </div>

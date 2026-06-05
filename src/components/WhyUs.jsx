@@ -1,4 +1,3 @@
-import React from 'react';
 
 export default function WhyUs() {
   const RAZONES = [
@@ -16,7 +15,7 @@ export default function WhyUs() {
     },
     {
       title: 'Consultoría de Cercanía',
-      desc: 'Actuamos como un ala estratégica interna de su organización. Brindamos respuestas ágiles, adaptadas a su cultura y a su presupuesto.'
+      desc: 'Actuamos como un ala estratégica interna de su organización.\nBrindamos respuestas ágiles, adaptadas a su cultura y a su presupuesto.'
     },
     {
       title: 'Modelo Integral',
@@ -48,7 +47,7 @@ export default function WhyUs() {
                   </div>
                   <div className="reason-info">
                     <h4>{razon.title}</h4>
-                    <p>{razon.desc}</p>
+                    <p style={{ whiteSpace: 'pre-line' }}>{razon.desc}</p>
                   </div>
                 </div>
               ))}

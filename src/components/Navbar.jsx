@@ -94,10 +94,11 @@ export default function Navbar({ onOpenContact }) {
               <ul className="dropdown-menu">
                 <li><a href="#programas" onClick={closeMobileMenus}>Programas de Capacitación</a></li>
                 <li><a href="#/plan-de-accion" onClick={closeMobileMenus}>Plan de Acción</a></li>
+                <li><a href="#/modelo-de-desarrollo" onClick={closeMobileMenus}>Modelo de Desarrollo</a></li>
               </ul>
             </li>
             <li><a href="#como-elegir" onClick={closeMobileMenus}>POR QUÉ ELEGIRNOS</a></li>
-            <li><a href="#clientes" onClick={closeMobileMenus}>CLIENTES</a></li>
+            <li><a href="#casos-de-exito" onClick={closeMobileMenus}>CASOS DE ÉXITO</a></li>
             <li><a href="#footer-contacto" onClick={closeMobileMenus}>CONTACTO</a></li>
             
             <li className="mobile-only-menu-section">

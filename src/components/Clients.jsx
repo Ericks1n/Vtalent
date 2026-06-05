@@ -1,63 +1,115 @@
-import React from 'react';
-
 export default function Clients() {
   const CLIENTS_DATA = [
     {
-      name: 'INCORSEM CIA. LTDA',
-      text: 'Basados en nuestra experiencia recomendamos con total confianza a BALUARTALENT & Co. que busque transformar su gestión de recursos humanos en una ventaja competitiva sostenible.',
-      category: 'Logística & Servicios',
-      logoInitials: 'IN'
+      name: 'Consorcio Línea 1 Metro de Quito',
+      category: 'ACCIONA · Infraestructura · Proyecto de US$ 1.592 millones',
+      services: 'Gestión de Nómina y Capacitación',
+      text: 'Gestionamos la nómina del Consorcio Línea 1, el megaproyecto de infraestructura que construyó los 22,6 km del primer metro de Quito con 15 estaciones. Administramos procesos de nómina bajo normativa ecuatoriana para el equipo operativo del proyecto, que generó 32.700 empleos anuales. Adicionalmente, implementamos programas de capacitación y certificación profesional para los trabajadores del proyecto.',
+      logoInitials: 'MQ'
     },
     {
-      name: 'ACCIONA CONSTRUCCIÓN',
-      text: 'Como Acciona Construcción, certificamos que BALUARTALENT & Co. ha demostrado ser una organización con los más altos estándares de profesionalismo, ética y eficiencia.',
-      category: 'Infraestructura & Construcción',
-      logoInitials: 'AC'
-    },
-    {
-      name: 'SEMEG CIA. LTDA.',
-      text: 'SEMEG, expresa su total satisfacción y recomienda ampliamente a la firma consultora BALUARTALENT & Co. por su excelente servicio en gestión integral de Talento Humano.',
-      category: 'Salud & Servicios Médicos',
+      name: 'Semeg Cia. Ltda.',
+      category: 'Servicios de Oil & Gas · Quito, Ecuador',
+      services: 'Gestión de Nómina y Capacitación',
+      text: 'Empresa en servicios petroleros, clasificada como Gran Contribuyente. Proveemos gestión integral de nómina bajo normativa IESS, MDT y SRI para sus operaciones de campo y oficina. Implementamos programas de capacitación técnica especializada para fortalecer las competencias de sus equipos operativos en entornos de alta exigencia.',
       logoInitials: 'SM'
     },
     {
       name: 'ICESA S.A.',
-      text: 'Otorgamos esta recomendación con total confianza a las empresas que busquen un aliado confiable para potenciar y blindar su talento.',
-      category: 'Comercial & Distribución',
+      category: 'Retail y Electrodomésticos · Fundada en 1965',
+      services: 'Capacitación en Servicio al Cliente y Ventas',
+      text: 'Una de las empresas retail más importantes del Ecuador, operando marcas como Almacenes Japón y Orve Hogar con más de 200 locales a nivel nacional. Diseñamos e implementamos programas de capacitación en excelencia de servicio al cliente y técnicas avanzadas de ventas, fortaleciendo las competencias comerciales de sus equipos en todo el país.',
       logoInitials: 'IC'
     }
   ];
 
   return (
-    <section id="clientes" className="section-padding" style={{ position: 'relative', background: '#F8FAFC' }}>
+    <section id="casos-de-exito" className="section-padding" style={{ position: 'relative', background: '#F8FAFC' }}>
       <div className="bg-blob blob-purple" style={{ top: '20%', right: '-10%', opacity: 0.08 }}></div>
       <div className="bg-blob blob-cyan" style={{ bottom: '10%', left: '-10%', opacity: 0.08 }}></div>
       
       <div className="container" style={{ position: 'relative', zIndex: 10 }}>
         <div className="services-header" style={{ marginBottom: '4rem' }}>
-          <span className="section-subtitle" style={{ marginBottom: '1.5rem', background: 'rgba(30, 64, 175, 0.1)', color: 'var(--primary)' }}>NUESTROS CLIENTES</span>
-          <h2>Opiniones de Empresas que Confían en Nosotros</h2>
+          <span className="section-subtitle" style={{ marginBottom: '1.5rem', background: 'rgba(30, 64, 175, 0.1)', color: 'var(--primary)' }}>CASOS DE ÉXITO</span>
+          <h2>Historias de Impacto y Resultados Realizados</h2>
           <p>
-            Trabajamos junto a organizaciones de diversos sectores para potenciar y blindar su capital humano.
+            Conozca cómo colaboramos con organizaciones líderes para potenciar y blindar sus operaciones y equipos de trabajo.
           </p>
         </div>
 
         <div className="clients-grid">
-          {CLIENTS_DATA.map((client, index) => (
-            <div key={index} className="client-card">
-              <div className="client-header">
-                <div className="client-logo-placeholder">
-                  {client.logoInitials}
+          {CLIENTS_DATA.map((client, index) => {
+            const isFirst = index === 0;
+            if (isFirst) {
+              return (
+                <div key={index} className="client-card first-case-card">
+                  <div className="first-case-inner">
+                    <div className="first-case-left">
+                      <div className="client-header" style={{ marginBottom: '1.5rem' }}>
+                        <div className="client-logo-placeholder" style={{ background: 'linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%)', flexShrink: 0 }}>
+                          {client.logoInitials}
+                        </div>
+                        <div className="client-meta">
+                          <h3 style={{ fontSize: '1.25rem', fontWeight: '700', color: 'var(--text-heading)', marginBottom: '0.2rem', lineHeight: '1.3' }}>{client.name}</h3>
+                          <span style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--text-muted)', display: 'block', textTransform: 'none', letterSpacing: 'normal' }}>{client.category}</span>
+                        </div>
+                      </div>
+                      <div className="client-services" style={{ 
+                        background: 'rgba(13, 148, 136, 0.08)', 
+                        color: 'var(--secondary)', 
+                        padding: '0.5rem 1rem', 
+                        borderRadius: '8px', 
+                        fontSize: '0.85rem', 
+                        fontWeight: '700', 
+                        marginBottom: '1.2rem',
+                        borderLeft: '3px solid var(--secondary)',
+                        display: 'inline-block'
+                      }}>
+                        Servicios: {client.services}
+                      </div>
+                    </div>
+                    <div className="first-case-right" style={{ display: 'flex', alignItems: 'center' }}>
+                      <p className="client-text" style={{ textAlign: 'justify', fontSize: '0.98rem', color: 'var(--text-main)', lineHeight: '1.7', margin: 0 }}>
+                        {client.text}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div className="client-meta">
-                  <h3>{client.name}</h3>
-                  <span>{client.category}</span>
+              );
+            }
+
+            return (
+              <div key={index} className="client-card" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+                <div className="client-header" style={{ marginBottom: '1.5rem' }}>
+                  <div className="client-logo-placeholder" style={{ background: 'linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%)', flexShrink: 0 }}>
+                    {client.logoInitials}
+                  </div>
+                  <div className="client-meta">
+                    <h3 style={{ fontSize: '1.15rem', fontWeight: '700', color: 'var(--text-heading)', marginBottom: '0.2rem', lineHeight: '1.3' }}>{client.name}</h3>
+                    <span style={{ fontSize: '0.8rem', fontWeight: '600', color: 'var(--text-muted)', display: 'block', textTransform: 'none', letterSpacing: 'normal' }}>{client.category}</span>
+                  </div>
                 </div>
+                
+                <div className="client-services" style={{ 
+                  background: 'rgba(13, 148, 136, 0.08)', 
+                  color: 'var(--secondary)', 
+                  padding: '0.5rem 1rem', 
+                  borderRadius: '8px', 
+                  fontSize: '0.85rem', 
+                  fontWeight: '700', 
+                  marginBottom: '1.2rem',
+                  borderLeft: '3px solid var(--secondary)',
+                  alignSelf: 'flex-start'
+                }}>
+                  Servicios: {client.services}
+                </div>
+
+                <p className="client-text" style={{ textAlign: 'justify', fontSize: '0.95rem', color: 'var(--text-main)', lineHeight: '1.65', margin: 0 }}>
+                  {client.text}
+                </p>
               </div>
-              <div className="client-quote-mark">“</div>
-              <p className="client-text">{client.text}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
