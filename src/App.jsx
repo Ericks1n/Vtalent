@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import AreasDesarrollo from './components/AreasDesarrollo';
 import Services from './components/Services';
 import WhyUs from './components/WhyUs';
 import Clients from './components/Clients';
@@ -69,7 +70,8 @@ function App() {
       default:
         return (
           <>
-            <Hero onOpenContact={handleOpenContact} />
+            <Hero />
+            <AreasDesarrollo />
             <Services />
             <WhyUs />
             <Clients />
@@ -84,7 +86,7 @@ function App() {
       <main>
         {renderContent()}
       </main>
-      <Footer onOpenContact={handleOpenContact} />
+      <Footer />
       <ContactModal isOpen={isContactOpen} onClose={handleCloseContact} />
     </>
   );

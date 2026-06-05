@@ -1,6 +1,4 @@
-import React from 'react';
-
-export default function Footer({ onOpenContact }) {
+export default function Footer() {
   return (
     <footer>
       <div className="container">
@@ -53,7 +51,7 @@ export default function Footer({ onOpenContact }) {
             <ul className="footer-links">
               <li><a href="#">Inicio</a></li>
               <li><a href="#nosotros">Por Qué Nosotros</a></li>
-              <li><a href="#servicios">Servicios</a></li>
+              <li><a href="#programas">Programas</a></li>
               <li><a href="#clientes">Clientes</a></li>
               <li><a href="#footer-contacto">Contacto</a></li>
             </ul>
@@ -61,12 +59,13 @@ export default function Footer({ onOpenContact }) {
 
           {/* Column 3: Services */}
           <div className="footer-column">
-            <h4>Servicios</h4>
+            <h4>Programas</h4>
             <ul className="footer-links">
-              <li><a href="#servicios">Gestión de Nómina</a></li>
-              <li><a href="#servicios">Capacitación Técnica</a></li>
-              <li><a href="#servicios">Salud Ocupacional</a></li>
-              <li><a href="#servicios">Seguridad Industrial</a></li>
+              <li><a href="#programas">Gestión del Talento Humano</a></li>
+              <li><a href="#programas">Seguridad y Salud Ocupacional</a></li>
+              <li><a href="#programas">Marketing, Ventas y Servicio</a></li>
+              <li><a href="#programas">Desarrollo Organizacional</a></li>
+              <li><a href="#programas">Asesorías Especializadas</a></li>
             </ul>
           </div>
 

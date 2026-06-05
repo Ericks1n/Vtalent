@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Navbar({ onOpenContact }) {
   const [scrolled, setScrolled] = useState(false);
@@ -79,20 +79,20 @@ export default function Navbar({ onOpenContact }) {
             </li>
             <li className={`nav-item-dropdown ${mobileServiciosOpen ? 'mobile-open' : ''}`}>
               <a 
-                href="#servicios" 
+                href="#programas" 
                 onClick={(e) => { 
                   e.preventDefault(); 
                   setMobileServiciosOpen(!mobileServiciosOpen); 
                 }}
                 className="dropdown-toggle"
               >
-                SERVICIOS
+                PROGRAMAS
                 <svg className="dropdown-arrow-icon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: '0.35rem', transition: 'transform 0.3s ease' }}>
                   <polyline points="6 9 12 15 18 9"></polyline>
                 </svg>
               </a>
               <ul className="dropdown-menu">
-                <li><a href="#servicios" onClick={closeMobileMenus}>Nuestros Servicios</a></li>
+                <li><a href="#programas" onClick={closeMobileMenus}>Programas de Capacitación</a></li>
                 <li><a href="#/plan-de-accion" onClick={closeMobileMenus}>Plan de Acción</a></li>
               </ul>
             </li>
@@ -101,12 +101,13 @@ export default function Navbar({ onOpenContact }) {
             <li><a href="#footer-contacto" onClick={closeMobileMenus}>CONTACTO</a></li>
             
             <li className="mobile-only-menu-section">
-              <span className="mobile-section-title">Nuestros Servicios</span>
+              <span className="mobile-section-title">Programas de Capacitación</span>
               <ul className="mobile-services-list">
-                <li><a href="#servicios" onClick={closeMobileMenus}>Gestión de Nómina</a></li>
-                <li><a href="#servicios" onClick={closeMobileMenus}>Capacitación Técnica</a></li>
-                <li><a href="#servicios" onClick={closeMobileMenus}>Salud Ocupacional</a></li>
-                <li><a href="#servicios" onClick={closeMobileMenus}>Seguridad Industrial</a></li>
+                <li><a href="#programas" onClick={closeMobileMenus}>Gestión del Talento Humano</a></li>
+                <li><a href="#programas" onClick={closeMobileMenus}>Seguridad y Salud Ocupacional</a></li>
+                <li><a href="#programas" onClick={closeMobileMenus}>Marketing, Ventas y Servicio</a></li>
+                <li><a href="#programas" onClick={closeMobileMenus}>Desarrollo Organizacional</a></li>
+                <li><a href="#programas" onClick={closeMobileMenus}>Asesorías Especializadas</a></li>
               </ul>
             </li>
 
@@ -134,17 +135,19 @@ export default function Navbar({ onOpenContact }) {
         </div>
       </div>
 
-      {/* 3. BOTTOM BAR (Fila Inferior - Servicios) */}
+      {/* 3. BOTTOM BAR (Fila Inferior - Programas) */}
       <div className="navbar-bottom-bar">
         <div className="container bottom-bar-container">
           <div className="services-links">
-            <a href="#servicios">GESTIÓN DE NÓMINA</a>
+            <a href="#programas">TALENTO HUMANO</a>
             <span className="bullet">•</span>
-            <a href="#servicios">CAPACITACIÓN TÉCNICA</a>
+            <a href="#programas">SEGURIDAD Y SALUD</a>
             <span className="bullet">•</span>
-            <a href="#servicios">SALUD OCUPACIONAL</a>
+            <a href="#programas">MARKETING Y VENTAS</a>
             <span className="bullet">•</span>
-            <a href="#servicios">SEGURIDAD INDUSTRIAL</a>
+            <a href="#programas">DESARROLLO ORG.</a>
+            <span className="bullet">•</span>
+            <a href="#programas">ASESORÍAS</a>
           </div>
         </div>
       </div>
