@@ -13,16 +13,16 @@ export default function NuestrosLideres() {
             <a href="#">Inicio</a> &gt; <span className="current">Nuestros Líderes</span>
           </div>
           <h1>Nuestros Líderes</h1>
-          <p className="subpage-subtitle">El equipo de profesionales y expertos que guía a BALUARTALENT & Co.</p>
+          <p className="subpage-subtitle">Un socio estratégico con experiencia comprobada</p>
         </div>
       </header>
 
       {/* Page Content */}
-      <section className="subpage-content section-padding">
+      <section className="subpage-content section-padding" style={{ paddingTop: '3rem' }}>
         <div className="container">
-          <div className="section-intro" style={{ marginBottom: '4rem', maxWidth: '800px' }}>
+          <div className="section-intro" style={{ marginBottom: '2rem', maxWidth: '800px' }}>
             <h2>Nuestra Dirección Estratégica</h2>
-            <p className="lead-text" style={{ color: 'var(--text-muted)' }}>
+            <p style={{ color: 'var(--text-muted)', fontSize: '1rem', fontWeight: '400', lineHeight: '1.6' }}>
               El equipo de Baluartalent & Co. está integrado por profesionales especializados en Dirección Estratégica de Recursos Humanos, Psicología Organizacional, Educación Continua y Legislación Laboral. Con más de 15 años de trayectoria corporativa liderando áreas de Talento Humano en sectores multisectoriales, combinan la visión del negocio con metodologías ágiles para blindar y potenciar su capital humano.
             </p>
           </div>

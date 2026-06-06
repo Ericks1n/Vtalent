@@ -18,12 +18,12 @@ export default function MisionVision() {
       </header>
 
       {/* Page Content */}
-      <section className="subpage-content section-padding">
+      <section className="subpage-content section-padding mision-vision-dark-section">
         <div className="container">
           <div className="mision-vision-grid">
             {/* Mision */}
             <div className="mision-vision-card">
-              <div className="card-icon-wrapper" style={{ background: 'rgba(30, 64, 175, 0.1)', color: 'var(--primary)' }}>
+              <div className="card-icon-wrapper" style={{ background: 'rgba(243, 156, 18, 0.15)', color: '#f39c12' }}>
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
                   <circle cx="12" cy="12" r="6"></circle>
@@ -31,21 +31,21 @@ export default function MisionVision() {
                 </svg>
               </div>
               <h2>Nuestra Misión</h2>
-              <p className="lead-text" style={{ margin: '1.5rem 0 0 0' }}>
+              <p style={{ margin: '1.5rem 0 0 0', fontSize: '1rem', lineHeight: '1.7' }}>
                 Impulsar el éxito de las organizaciones potenciando el desarrollo y la estrategia de su talento humano. Conectando estrategias de negocio con el potencial de las personas.
               </p>
             </div>
 
             {/* Vision */}
             <div className="mision-vision-card">
-              <div className="card-icon-wrapper" style={{ background: 'rgba(13, 148, 136, 0.1)', color: 'var(--secondary)' }}>
+              <div className="card-icon-wrapper" style={{ background: 'rgba(243, 156, 18, 0.15)', color: '#f39c12' }}>
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                   <circle cx="12" cy="12" r="3"></circle>
                 </svg>
               </div>
               <h2>Nuestra Visión</h2>
-              <p className="lead-text" style={{ margin: '1.5rem 0 0 0', color: 'var(--secondary)' }}>
+              <p style={{ margin: '1.5rem 0 0 0', fontSize: '1rem', lineHeight: '1.7' }}>
                 Ser la consultora referente en gestión de talento, reconocida por su innovación y soluciones humanas de alto impacto, destacándonos por la innovación tecnológica y la excelencia de nuestros servicios.
               </p>
             </div>

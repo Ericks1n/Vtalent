@@ -83,11 +83,11 @@ export default function ValoresCorporativos() {
       </header>
 
       {/* Page Content */}
-      <section className="subpage-content section-padding">
+      <section className="subpage-content section-padding" style={{ paddingTop: '3rem' }}>
         <div className="container">
-          <div className="section-intro" style={{ marginBottom: '4rem', maxWidth: '800px' }}>
+          <div className="section-intro" style={{ marginBottom: '2rem', maxWidth: '800px' }}>
             <h2>Nuestra Cultura Organizacional</h2>
-            <p className="lead-text" style={{ color: 'var(--text-muted)' }}>
+            <p style={{ color: 'var(--text-muted)', fontSize: '1rem', fontWeight: '400', lineHeight: '1.6' }}>
               En Baluartalent & Co. nos guían principios sólidos que definen nuestra forma de trabajar y el compromiso que asumimos con cada organización y profesional.
             </p>
           </div>

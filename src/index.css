@@ -2049,6 +2049,48 @@ footer {
   }
 }
 
+/* Mision y Vision Dark Theme styling (based on Areas de Desarrollo color scheme) */
+.mision-vision-dark-section {
+  background-color: #0a2647;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+.mision-vision-dark-section .mision-vision-card {
+  background: #0d3054;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 5px solid #f39c12;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  transition: var(--transition-smooth);
+}
+
+.mision-vision-dark-section .mision-vision-card:hover {
+  border-color: rgba(243, 156, 18, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 25px rgba(243, 156, 18, 0.15);
+  transform: translateY(-6px);
+}
+
+.mision-vision-dark-section .mision-vision-card h2 {
+  color: #ffffff;
+}
+
+.mision-vision-dark-section .mision-vision-card p {
+  color: #cbd5e1;
+}
+
+.mision-vision-dark-section .btn-secondary {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.25);
+  background: transparent;
+}
+
+.mision-vision-dark-section .btn-secondary:hover {
+  border-color: #f39c12;
+  color: #f39c12;
+  background: rgba(243, 156, 18, 0.05);
+}
+
 
 /* Valores Corporativos Subpage detailed layout */
 .valores-grid {
