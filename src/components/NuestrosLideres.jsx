@@ -18,7 +18,7 @@ export default function NuestrosLideres() {
       </header>
 
       {/* Page Content */}
-      <section className="subpage-content section-padding" style={{ paddingTop: '3rem' }}>
+      <section className="subpage-content section-padding">
         <div className="container">
           <div className="section-intro" style={{ marginBottom: '2rem', maxWidth: '800px' }}>
             <h2>Nuestra Dirección Estratégica</h2>

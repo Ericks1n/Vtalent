@@ -93,12 +93,12 @@ a {
 }
 
 .section-padding {
-  padding: 8rem 0;
+  padding: 2.5rem 0;
 }
 
 @media (max-width: 768px) {
   .section-padding {
-    padding: 5rem 0;
+    padding: 1.5rem 0;
   }
 }
 
