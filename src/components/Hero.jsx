@@ -53,7 +53,7 @@ export default function Hero() {
           </div>
 
           <div className="hero-buttons">
-            <a href="#programas" className="btn btn-primary" style={{ boxShadow: '0 4px 15px rgba(56, 189, 248, 0.3)' }}>
+            <a href="#programas-capacitacion" className="btn btn-primary" style={{ boxShadow: '0 4px 15px rgba(56, 189, 248, 0.3)' }}>
               Ver Programas
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>

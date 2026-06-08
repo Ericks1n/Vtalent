@@ -92,7 +92,7 @@ export default function Navbar({ onOpenContact }) {
                 </svg>
               </a>
               <ul className="dropdown-menu">
-                <li><a href="#programas" onClick={closeMobileMenus}>Programas de Capacitación</a></li>
+                <li><a href="#programas-capacitacion" onClick={closeMobileMenus}>Programas de Capacitación</a></li>
                 <li><a href="#/plan-de-accion" onClick={closeMobileMenus}>Plan de Acción</a></li>
                 <li><a href="#/modelo-de-desarrollo" onClick={closeMobileMenus}>Modelo de Desarrollo</a></li>
               </ul>
@@ -104,11 +104,11 @@ export default function Navbar({ onOpenContact }) {
             <li className="mobile-only-menu-section">
               <span className="mobile-section-title">Programas de Capacitación</span>
               <ul className="mobile-services-list">
-                <li><a href="#programas" onClick={closeMobileMenus}>Gestión del Talento Humano</a></li>
-                <li><a href="#programas" onClick={closeMobileMenus}>Seguridad y Salud Ocupacional</a></li>
-                <li><a href="#programas" onClick={closeMobileMenus}>Marketing, Ventas y Servicio</a></li>
-                <li><a href="#programas" onClick={closeMobileMenus}>Desarrollo Organizacional</a></li>
-                <li><a href="#programas" onClick={closeMobileMenus}>Asesorías Especializadas</a></li>
+                <li><a href="#programas-capacitacion" onClick={closeMobileMenus}>Gestión del Talento Humano</a></li>
+                <li><a href="#programas-capacitacion" onClick={closeMobileMenus}>Seguridad y Salud Ocupacional</a></li>
+                <li><a href="#programas-capacitacion" onClick={closeMobileMenus}>Marketing, Ventas y Servicio</a></li>
+                <li><a href="#programas-capacitacion" onClick={closeMobileMenus}>Desarrollo Organizacional</a></li>
+                <li><a href="#programas-capacitacion" onClick={closeMobileMenus}>Asesorías Especializadas</a></li>
               </ul>
             </li>
 
@@ -140,15 +140,15 @@ export default function Navbar({ onOpenContact }) {
       <div className="navbar-bottom-bar">
         <div className="container bottom-bar-container">
           <div className="services-links">
-            <a href="#programas">TALENTO HUMANO</a>
+            <a href="#programas-capacitacion">TALENTO HUMANO</a>
             <span className="bullet">•</span>
-            <a href="#programas">SEGURIDAD Y SALUD</a>
+            <a href="#programas-capacitacion">SEGURIDAD Y SALUD</a>
             <span className="bullet">•</span>
-            <a href="#programas">MARKETING Y VENTAS</a>
+            <a href="#programas-capacitacion">MARKETING Y VENTAS</a>
             <span className="bullet">•</span>
-            <a href="#programas">DESARROLLO ORG.</a>
+            <a href="#programas-capacitacion">DESARROLLO ORG.</a>
             <span className="bullet">•</span>
-            <a href="#programas">ASESORÍAS</a>
+            <a href="#programas-capacitacion">ASESORÍAS</a>
           </div>
         </div>
       </div>

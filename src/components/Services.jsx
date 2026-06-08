@@ -77,7 +77,7 @@ export default function Services() {
     <section id="programas" className="section-padding" style={{ position: 'relative' }}>
       <div className="container">
         <div className="services-header">
-          <span className="section-subtitle" style={{ marginBottom: '1.5rem' }}>PROGRAMAS DE CAPACITACIÓN</span>
+          <span id="programas-capacitacion" className="section-subtitle" style={{ marginBottom: '1.5rem' }}>PROGRAMAS DE CAPACITACIÓN</span>
           <h2>BALUARTALENT & Co. | Programas de formación y especialización profesional.</h2>
           <p>
             Soluciones formativas de alto impacto diseñadas para elevar la competitividad de sus equipos de trabajo.

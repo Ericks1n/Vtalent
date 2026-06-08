@@ -2634,3 +2634,15 @@ footer {
 .area-card.card-capacitacion:hover .bullet-check {
   background: rgba(13, 148, 136, 0.15);
 }
+
+/* Scroll offset for Programs subtitle under sticky header */
+#programas-capacitacion {
+  scroll-margin-top: 140px;
+}
+
+@media (max-width: 992px) {
+  #programas-capacitacion {
+    scroll-margin-top: 90px;
+  }
+}
+

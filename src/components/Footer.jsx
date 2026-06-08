@@ -51,7 +51,7 @@ export default function Footer() {
             <ul className="footer-links">
               <li><a href="#">Inicio</a></li>
               <li><a href="#nosotros">Por Qué Nosotros</a></li>
-              <li><a href="#programas">Programas</a></li>
+              <li><a href="#programas-capacitacion">Programas</a></li>
               <li><a href="#casos-de-exito">Casos de Éxito</a></li>
               <li><a href="#footer-contacto">Contacto</a></li>
             </ul>
@@ -61,11 +61,11 @@ export default function Footer() {
           <div className="footer-column">
             <h4>Programas</h4>
             <ul className="footer-links">
-              <li><a href="#programas">Gestión del Talento Humano</a></li>
-              <li><a href="#programas">Seguridad y Salud Ocupacional</a></li>
-              <li><a href="#programas">Marketing, Ventas y Servicio</a></li>
-              <li><a href="#programas">Desarrollo Organizacional</a></li>
-              <li><a href="#programas">Asesorías Especializadas</a></li>
+              <li><a href="#programas-capacitacion">Gestión del Talento Humano</a></li>
+              <li><a href="#programas-capacitacion">Seguridad y Salud Ocupacional</a></li>
+              <li><a href="#programas-capacitacion">Marketing, Ventas y Servicio</a></li>
+              <li><a href="#programas-capacitacion">Desarrollo Organizacional</a></li>
+              <li><a href="#programas-capacitacion">Asesorías Especializadas</a></li>
             </ul>
           </div>
 
