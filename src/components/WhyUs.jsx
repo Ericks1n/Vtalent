@@ -28,11 +28,13 @@ export default function WhyUs() {
       <div className="container">
         <div className="why-us-grid">
           <div className="why-us-content">
-            <span className="section-subtitle" style={{ marginBottom: '1.5rem' }}>NUESTRA PROMESA DE VALOR</span>
             <h2>BALUARTALENT & Co. | Por qué elegir el enfoque.</h2>
             <p className="lead-text" style={{ margin: '1.5rem 0 2.5rem 0' }}>
               Es momento de transformar la administración del talento en una ventaja competitiva.
             </p>
+            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2.5rem' }}>
+              <span className="section-subtitle">NUESTRA PROMESA DE VALOR</span>
+            </div>
 
             <div className="reasons-list">
               {RAZONES.map((razon, index) => (
