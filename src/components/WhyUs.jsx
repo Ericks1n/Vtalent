@@ -30,7 +30,7 @@ export default function WhyUs() {
           <div className="why-us-content">
             <div className="why-us-header" style={{ textAlign: 'center', marginBottom: '3rem' }}>
               <h2 style={{ fontSize: '2.2rem', lineHeight: '1.25' }}>BALUARTALENT & Co. | Por qué elegir el enfoque.</h2>
-              <p style={{ maxWidth: '800px', margin: '1rem auto 2.5rem auto', color: 'var(--text-muted)' }}>
+              <p style={{ maxWidth: '800px', margin: '1rem auto 2.5rem auto', color: 'var(--text-muted)', textAlign: 'center' }}>
                 Es momento de transformar la administración del talento en una ventaja competitiva.
               </p>
               <div style={{ display: 'flex', justifyContent: 'center' }}>
