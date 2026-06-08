@@ -94,36 +94,38 @@ export default function ContactModal({ isOpen, onClose }) {
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 />
               </div>
-              <div className="form-group">
-                <label htmlFor="modal-email">Correo Electrónico Corporativo</label>
-                <input
-                  type="email"
-                  id="modal-email"
-                  required
-                  className="form-input"
-                  placeholder="ejemplo@empresa.com"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="modal-phone">Teléfono / WhatsApp</label>
-                <input
-                  type="tel"
-                  id="modal-phone"
-                  required
-                  className="form-input"
-                  placeholder="Ej. +593 99 999 9999"
-                  value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                />
+              <div className="form-row">
+                <div className="form-group">
+                  <label htmlFor="modal-email">Correo Electrónico Corporativo</label>
+                  <input
+                    type="email"
+                    id="modal-email"
+                    required
+                    className="form-input"
+                    placeholder="ejemplo@empresa.com"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="modal-phone">Teléfono / WhatsApp</label>
+                  <input
+                    type="tel"
+                    id="modal-phone"
+                    required
+                    className="form-input"
+                    placeholder="Ej. +593 99 999 9999"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  />
+                </div>
               </div>
               <div className="form-group">
                 <label htmlFor="modal-message">Detalles de tu Necesidad de Personal</label>
                 <textarea
                   id="modal-message"
                   required
-                  rows="4"
+                  rows="3"
                   className="form-input"
                   placeholder="Cuéntanos sobre los perfiles que buscas reclutar o el servicio de Recursos Humanos que requiere tu empresa..."
                   value={formData.message}
