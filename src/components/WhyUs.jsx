@@ -28,12 +28,14 @@ export default function WhyUs() {
       <div className="container">
         <div className="why-us-grid">
           <div className="why-us-content">
-            <h2>BALUARTALENT & Co. | Por qué elegir el enfoque.</h2>
-            <p className="lead-text" style={{ margin: '1.5rem 0 2.5rem 0' }}>
-              Es momento de transformar la administración del talento en una ventaja competitiva.
-            </p>
-            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2.5rem' }}>
-              <span className="section-subtitle">NUESTRA PROMESA DE VALOR</span>
+            <div className="why-us-header" style={{ textAlign: 'center', marginBottom: '3rem' }}>
+              <h2 style={{ fontSize: '2.2rem', lineHeight: '1.25' }}>BALUARTALENT & Co. | Por qué elegir el enfoque.</h2>
+              <p style={{ maxWidth: '800px', margin: '1rem auto 2.5rem auto', color: 'var(--text-muted)' }}>
+                Es momento de transformar la administración del talento en una ventaja competitiva.
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <span className="section-subtitle">NUESTRA PROMESA DE VALOR</span>
+              </div>
             </div>
 
             <div className="reasons-list">
