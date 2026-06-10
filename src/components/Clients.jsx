@@ -2,7 +2,7 @@ export default function Clients() {
   const CLIENTS_DATA = [
     {
       name: 'Consorcio Línea 1 Metro de Quito',
-      category: 'ACCIONA · Infraestructura · Proyecto de US$ 1.592 millones',
+      category: 'ACCIONA · Infraestructura',
       services: 'Gestión de Nómina y Capacitación',
       text: 'Gestionamos la nómina del Consorcio Línea 1, el megaproyecto de infraestructura que construyó los 22,6 km del primer metro de Quito con 15 estaciones. Administramos procesos de nómina bajo normativa ecuatoriana para el equipo operativo del proyecto, que generó 32.700 empleos anuales. Adicionalmente, implementamos programas de capacitación y certificación profesional para los trabajadores del proyecto.',
       logoInitials: 'MQ'
@@ -54,6 +54,15 @@ export default function Clients() {
                           <span style={{ fontSize: '0.85rem', fontWeight: '600', color: 'var(--text-muted)', display: 'block', textTransform: 'none', letterSpacing: 'normal' }}>{client.category}</span>
                         </div>
                       </div>
+                      <div className="client-card-img-wrapper">
+                        <img 
+                          src="/metro_quito.png" 
+                          alt="Consorcio Línea 1 Metro de Quito" 
+                          className="client-card-img"
+                        />
+                      </div>
+                    </div>
+                    <div className="first-case-right" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start' }}>
                       <div className="client-services" style={{ 
                         background: 'rgba(13, 148, 136, 0.08)', 
                         color: 'var(--secondary)', 
@@ -67,8 +76,6 @@ export default function Clients() {
                       }}>
                         Servicios: {client.services}
                       </div>
-                    </div>
-                    <div className="first-case-right" style={{ display: 'flex', alignItems: 'center' }}>
                       <p className="client-text" style={{ textAlign: 'justify', fontSize: '0.98rem', color: 'var(--text-main)', lineHeight: '1.7', margin: 0 }}>
                         {client.text}
                       </p>
