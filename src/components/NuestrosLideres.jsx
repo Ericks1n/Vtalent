@@ -84,6 +84,25 @@ export default function NuestrosLideres() {
                 </p>
               </div>
             </div>
+
+            {/* Leader 4 */}
+            <div className="leader-card">
+              <div style={{ width: '100%', height: '250px', overflow: 'hidden', borderBottom: '1px solid var(--border-light)' }}>
+                <img 
+                  src="/ricardo_pavon.png" 
+                  alt="Ricardo Pavon - Especialista Jurídico" 
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }} 
+                />
+              </div>
+              <div className="leader-info">
+                <h3>Ricardo Pavon</h3>
+                <span className="leader-role">Especialista Jurídico</span>
+                <span className="leader-subtitle">Master en Derecho Laboral</span>
+                <p className="leader-bio">
+                  Abogado con más de 21 años en Derecho Laboral. Trayectoria pública como Director Regional del Trabajo, Inspector del Trabajo y Jefe de los Jueces de Trabajo de Pichincha.
+                </p>
+              </div>
+            </div>
           </div>
 
           <div style={{ marginTop: '4rem', textAlign: 'center' }}>
