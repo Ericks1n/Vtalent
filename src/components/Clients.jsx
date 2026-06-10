@@ -56,7 +56,7 @@ export default function Clients() {
                       </div>
                       <div className="client-card-img-wrapper">
                         <img 
-                          src="/metro_quito.png" 
+                          src="/metro_quito.jpg" 
                           alt="Consorcio Línea 1 Metro de Quito" 
                           className="client-card-img"
                         />
