@@ -16,7 +16,7 @@ export default function AreasDesarrollo() {
         </div>
 
         <div className="areas-grid">
-          {/* Card 1: GESTIÓN DE PAYROLL ESTRATÉGICO */}
+          {/* Card 1: GESTIÓN DE NÓMINA - PAYROLL */}
           <div className="area-card card-payroll">
             <div className="area-icon-wrapper icon-payroll">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -27,7 +27,7 @@ export default function AreasDesarrollo() {
                 <path d="M9 16l2 2 4-4"></path>
               </svg>
             </div>
-            <h3>GESTIÓN DE PAYROLL ESTRATÉGICO</h3>
+            <h3>GESTIÓN DE NÓMINA - PAYROLL</h3>
             <p className="area-description">
               Procesamos el cálculo de nómina y pago de salarios integrando tecnología, cumplimiento legal, tiempos oportunos y analítica de datos para una toma de decisiones optimizada.
             </p>
@@ -59,7 +59,46 @@ export default function AreasDesarrollo() {
             </ul>
           </div>
 
-          {/* Card 2: CAPACITACIÓN ESPECIALIZADA */}
+          {/* Card 2: ASESORÍA JURÍDICA Y LEGAL */}
+          <div className="area-card card-juridica">
+            <div className="area-icon-wrapper icon-juridica">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3>ASESORÍA JURÍDICA Y LEGAL</h3>
+            <p className="area-description">
+              Asesoramos a su organización en derecho laboral y corporativo para prevenir riesgos, elaborar contratación a medida y garantizar el blindaje jurídico de su empresa.
+            </p>
+            <ul className="area-bullets">
+              <li>
+                <div className="bullet-check">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>Auditorías y blindaje laboral</span>
+              </li>
+              <li>
+                <div className="bullet-check">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>Contratos y reglamentos internos</span>
+              </li>
+              <li>
+                <div className="bullet-check">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>Prevención de contingencias</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Card 3: CAPACITACIÓN CORPORATIVA */}
           <div className="area-card card-capacitacion">
             <div className="area-icon-wrapper icon-capacitacion">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -69,7 +108,7 @@ export default function AreasDesarrollo() {
                 <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
               </svg>
             </div>
-            <h3>CAPACITACIÓN ESPECIALIZADA</h3>
+            <h3>CAPACITACIÓN CORPORATIVA</h3>
             <p className="area-description">
               Formamos líderes que generan valor. Programas que combinan especialistas con metodologías probadas para un aprendizaje de alto impacto y aplicación inmediata.
             </p>

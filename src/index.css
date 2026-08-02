@@ -666,6 +666,8 @@ a {
   transition: var(--transition-smooth);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .hero-feature-card:hover {
@@ -2494,9 +2496,9 @@ footer {
 
 .areas-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
-  max-width: 1000px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -2512,7 +2514,7 @@ footer {
   background: var(--bg-card);
   border: 1px solid var(--border-light);
   border-radius: 24px;
-  padding: 3rem 2.5rem;
+  padding: 3rem 2rem;
   transition: var(--transition-smooth);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -2541,6 +2543,10 @@ footer {
   background: linear-gradient(135deg, rgba(30, 64, 175, 0.04) 0%, transparent 100%);
 }
 
+.area-card.card-juridica::before {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.04) 0%, transparent 100%);
+}
+
 .area-card.card-capacitacion::before {
   background: linear-gradient(135deg, rgba(13, 148, 136, 0.04) 0%, transparent 100%);
 }
@@ -2557,6 +2563,10 @@ footer {
 
 .area-card.card-payroll:hover {
   border-color: rgba(30, 64, 175, 0.25);
+}
+
+.area-card.card-juridica:hover {
+  border-color: rgba(99, 102, 241, 0.25);
 }
 
 .area-card.card-capacitacion:hover {
@@ -2587,6 +2597,17 @@ footer {
   box-shadow: 0 0 20px rgba(30, 64, 175, 0.3);
 }
 
+.area-icon-wrapper.icon-juridica {
+  background: rgba(99, 102, 241, 0.08);
+  color: #6366f1;
+}
+
+.area-card.card-juridica:hover .icon-juridica {
+  background: #6366f1;
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+}
+
 .area-icon-wrapper.icon-capacitacion {
   background: rgba(13, 148, 136, 0.08);
   color: var(--secondary);
@@ -2599,7 +2620,7 @@ footer {
 }
 
 .area-card h3 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   margin-bottom: 1.2rem;
   color: var(--text-heading);
   letter-spacing: -0.01em;
@@ -2609,7 +2630,7 @@ footer {
 }
 
 .area-description {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--text-main);
   line-height: 1.65;
   margin-bottom: 2rem;
@@ -2658,6 +2679,11 @@ footer {
   color: var(--primary);
 }
 
+.card-juridica .bullet-check {
+  background: rgba(99, 102, 241, 0.08);
+  color: #6366f1;
+}
+
 .card-capacitacion .bullet-check {
   background: rgba(13, 148, 136, 0.08);
   color: var(--secondary);
@@ -2665,6 +2691,10 @@ footer {
 
 .area-card.card-payroll:hover .bullet-check {
   background: rgba(30, 64, 175, 0.15);
+}
+
+.area-card.card-juridica:hover .bullet-check {
+  background: rgba(99, 102, 241, 0.15);
 }
 
 .area-card.card-capacitacion:hover .bullet-check {

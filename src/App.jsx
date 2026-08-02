@@ -14,6 +14,9 @@ import MisionVision from './components/MisionVision';
 import ValoresCorporativos from './components/ValoresCorporativos';
 import PlanDeAccion from './components/PlanDeAccion';
 import ModeloDesarrollo from './components/ModeloDesarrollo';
+import GestionNomina from './components/GestionNomina';
+import AsesoriaJuridica from './components/AsesoriaJuridica';
+import CapacitacionCorporativa from './components/CapacitacionCorporativa';
 
 function App() {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -39,6 +42,15 @@ function App() {
         window.scrollTo({ top: 0, behavior: 'instant' });
       } else if (hash === '#/modelo-de-desarrollo') {
         setCurrentView('modelo-de-desarrollo');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      } else if (hash === '#/gestion-de-nomina') {
+        setCurrentView('gestion-de-nomina');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      } else if (hash === '#/asesoria-juridica-legal') {
+        setCurrentView('asesoria-juridica-legal');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      } else if (hash === '#/capacitacion-corporativa') {
+        setCurrentView('capacitacion-corporativa');
         window.scrollTo({ top: 0, behavior: 'instant' });
       } else {
         setCurrentView('home');
@@ -72,6 +84,12 @@ function App() {
         return <PlanDeAccion />;
       case 'modelo-de-desarrollo':
         return <ModeloDesarrollo />;
+      case 'gestion-de-nomina':
+        return <GestionNomina />;
+      case 'asesoria-juridica-legal':
+        return <AsesoriaJuridica />;
+      case 'capacitacion-corporativa':
+        return <CapacitacionCorporativa />;
       case 'home':
       default:
         return (
