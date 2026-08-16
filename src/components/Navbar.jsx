@@ -34,7 +34,7 @@ export default function Navbar({ onOpenContact }) {
             <span className="separator">|</span>
             <a href="mailto:info@baluartalent.com">info@baluartalent.com</a>
             <span className="separator">|</span>
-            <a href="#como-elegir">Por qué elegirnos</a>
+            <a href="#/cursos">Cursos Aula Virtual</a>
           </div>
         </div>
       </div>
@@ -97,10 +97,17 @@ export default function Navbar({ onOpenContact }) {
                 <li><a href="#/modelo-de-desarrollo" onClick={closeMobileMenus}>Modelo de Desarrollo</a></li>
               </ul>
             </li>
-            <li><a href="#como-elegir" onClick={closeMobileMenus}>POR QUÉ ELEGIRNOS</a></li>
+            <li><a href="#/cursos" onClick={closeMobileMenus}>CURSOS</a></li>
             <li><a href="#casos-de-exito" onClick={closeMobileMenus}>CASOS DE ÉXITO</a></li>
             <li><a href="#footer-contacto" onClick={closeMobileMenus}>CONTACTO</a></li>
             
+            <li className="mobile-only-menu-section">
+              <span className="mobile-section-title">Cursos & Aula Virtual</span>
+              <ul className="mobile-services-list">
+                <li><a href="#/cursos" onClick={closeMobileMenus}>Catálogo Completo ($50 + IVA)</a></li>
+              </ul>
+            </li>
+
             <li className="mobile-only-menu-section">
               <span className="mobile-section-title">Programas de Capacitación</span>
               <ul className="mobile-services-list">

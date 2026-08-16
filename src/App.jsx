@@ -17,6 +17,7 @@ import ModeloDesarrollo from './components/ModeloDesarrollo';
 import GestionNomina from './components/GestionNomina';
 import AsesoriaJuridica from './components/AsesoriaJuridica';
 import CapacitacionCorporativa from './components/CapacitacionCorporativa';
+import Cursos from './components/Cursos';
 
 function App() {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -51,6 +52,9 @@ function App() {
         window.scrollTo({ top: 0, behavior: 'instant' });
       } else if (hash === '#/capacitacion-corporativa') {
         setCurrentView('capacitacion-corporativa');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      } else if (hash === '#/cursos') {
+        setCurrentView('cursos');
         window.scrollTo({ top: 0, behavior: 'instant' });
       } else {
         setCurrentView('home');
@@ -90,6 +94,8 @@ function App() {
         return <AsesoriaJuridica />;
       case 'capacitacion-corporativa':
         return <CapacitacionCorporativa />;
+      case 'cursos':
+        return <Cursos onOpenContact={handleOpenContact} />;
       case 'home':
       default:
         return (
