@@ -235,8 +235,9 @@ export default function Cursos({ onOpenContact }) {
     <div className="subpage-wrapper courses-page-wrapper">
       {/* Header Banner */}
       <header className="subpage-header courses-header">
-        <div className="bg-blob blob-purple" style={{ top: '-15%', right: '10%' }}></div>
-        <div className="bg-blob blob-cyan" style={{ bottom: '-20%', left: '5%' }}></div>
+        <div className="courses-header-dim"></div>
+        <div className="bg-blob blob-purple" style={{ top: '-15%', right: '10%', opacity: 0.2 }}></div>
+        <div className="bg-blob blob-cyan" style={{ bottom: '-20%', left: '5%', opacity: 0.2 }}></div>
 
         <div className="container">
           <div className="breadcrumbs">
