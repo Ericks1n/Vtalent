@@ -81,41 +81,35 @@ export default function GestionNomina() {
             </p>
           </div>
 
-          {/* Pillars Grid */}
-          <div className="timeline-container">
-            <div className="timeline-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))' }}>
-              {PILLARS.map((pillar, index) => (
-                <div key={index} className="timeline-node">
-                  <div className={`node-circle ${pillar.colorClass}`}>
-                    {pillar.num}
-                  </div>
-                  <div className="node-card" style={{ height: '100%' }}>
-                    <div className="node-icon-wrapper" style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem', color: '#38bdf8' }}>
-                      {pillar.icon}
-                    </div>
-                    <h3>{pillar.title}</h3>
-                    <p>{pillar.desc}</p>
-                  </div>
+          {/* Process Pipeline Grid */}
+          <div className="payroll-pipeline-grid">
+            {PILLARS.map((pillar, index) => (
+              <div key={index} className="payroll-pipeline-card">
+                <span className="payroll-step-badge">Paso {pillar.num}</span>
+                <div className="payroll-icon-box">
+                  {pillar.icon}
                 </div>
-              ))}
-            </div>
+                <h3>{pillar.title}</h3>
+                <p>{pillar.desc}</p>
+              </div>
+            ))}
           </div>
 
-          {/* Business Benefits Highlight */}
-          <div style={{ marginTop: '5rem', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '20px', padding: '3rem 2rem', backdropFilter: 'blur(10px)' }}>
-            <h3 style={{ fontSize: '1.5rem', fontWeight: '700', marginBottom: '1.5rem', color: '#ffffff', textAlign: 'center' }}>¿Por qué externalizar la nómina con BALUARTALENT?</h3>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem', marginTop: '2rem' }}>
-              <div style={{ padding: '1rem' }}>
-                <h4 style={{ color: '#38bdf8', fontSize: '1.1rem', marginBottom: '0.5rem' }}>🔒 Confidencialidad Absoluta</h4>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: '1.6' }}>Protegemos la información salarial sensible de la empresa bajo estrictos protocolos de ciberseguridad y confidencialidad.</p>
+          {/* Business Benefits Highlight (Trust Matrix) */}
+          <div className="payroll-benefits-matrix">
+            <h3>¿Por qué externalizar la nómina con BALUARTALENT?</h3>
+            <div className="payroll-benefits-grid">
+              <div className="payroll-benefit-item">
+                <h4>🔒 Confidencialidad Absoluta</h4>
+                <p>Protegemos la información salarial sensible de la empresa bajo estrictos protocolos de ciberseguridad y confidencialidad.</p>
               </div>
-              <div style={{ padding: '1rem' }}>
-                <h4 style={{ color: '#38bdf8', fontSize: '1.1rem', marginBottom: '0.5rem' }}>⏱️ Ahorro de Tiempo y Costos</h4>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: '1.6' }}>Reducimos la carga operativa interna y los costos asociados al software, capacitación y mantenimiento de nómina.</p>
+              <div className="payroll-benefit-item">
+                <h4>⏱️ Ahorro de Tiempo y Costos</h4>
+                <p>Reducimos la carga operativa interna y los costos asociados al software, capacitación y mantenimiento de nómina.</p>
               </div>
-              <div style={{ padding: '1rem' }}>
-                <h4 style={{ color: '#38bdf8', fontSize: '1.1rem', marginBottom: '0.5rem' }}>⚖️ Tranquilidad Legal</h4>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: '1.6' }}>Actualizaciones continuas conforme a cambios en el Código del Trabajo y regulaciones del IESS o SRI.</p>
+              <div className="payroll-benefit-item">
+                <h4>⚖️ Tranquilidad Legal</h4>
+                <p>Actualizaciones continuas conforme a cambios en el Código del Trabajo y regulaciones del IESS o SRI.</p>
               </div>
             </div>
           </div>

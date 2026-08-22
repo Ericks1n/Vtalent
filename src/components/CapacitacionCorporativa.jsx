@@ -80,41 +80,42 @@ export default function CapacitacionCorporativa() {
             </p>
           </div>
 
-          {/* Pillars Grid */}
-          <div className="timeline-container">
-            <div className="timeline-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))' }}>
-              {COURSES_GRID.map((item, index) => (
-                <div key={index} className="timeline-node">
-                  <div className={`node-circle ${item.colorClass}`}>
-                    {item.num}
-                  </div>
-                  <div className="node-card" style={{ height: '100%' }}>
-                    <div className="node-icon-wrapper" style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem', color: '#38bdf8' }}>
-                      {item.icon}
-                    </div>
+          {/* Modular Learning Tracks Container */}
+          <div className="training-tracks-container">
+            {COURSES_GRID.map((item, index) => (
+              <div key={index} className="training-track-row">
+                <div className="training-track-number-col">
+                  <span className="training-track-num">{item.num}</span>
+                  <span className="training-track-tag">Fase</span>
+                </div>
+                <div className="training-track-body">
+                  <div className="training-track-content">
                     <h3>{item.title}</h3>
                     <p>{item.desc}</p>
                   </div>
+                  <div className="training-track-icon">
+                    {item.icon}
+                  </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
 
-          {/* Training Pillars */}
-          <div style={{ marginTop: '5rem', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '20px', padding: '3rem 2rem', backdropFilter: 'blur(10px)' }}>
-            <h3 style={{ fontSize: '1.5rem', fontWeight: '700', marginBottom: '1.5rem', color: '#ffffff', textAlign: 'center' }}>Módulos Destacados de Capacitación</h3>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem', marginTop: '2rem' }}>
-              <div style={{ padding: '1rem' }}>
-                <h4 style={{ color: '#38bdf8', fontSize: '1.1rem', marginBottom: '0.5rem' }}>🎯 Gestión del Talento Humano</h4>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: '1.6' }}>Evaluación del desempeño, retención de talento, clima laboral y modelos de competencias.</p>
+          {/* Training Pillars Showcase */}
+          <div className="training-pillars-showcase">
+            <h3>Módulos Destacados de Capacitación</h3>
+            <div className="training-pillars-grid">
+              <div className="training-pillar-card">
+                <h4>🎯 Gestión del Talento Humano</h4>
+                <p>Evaluación del desempeño, retención de talento, clima laboral y modelos de competencias organizacionales.</p>
               </div>
-              <div style={{ padding: '1rem' }}>
-                <h4 style={{ color: '#38bdf8', fontSize: '1.1rem', marginBottom: '0.5rem' }}>🛡️ Seguridad y Salud Ocupacional</h4>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: '1.6' }}>Prevención de riesgos laborales, comités paritarios, normativas y salud psicosocial.</p>
+              <div className="training-pillar-card">
+                <h4>🛡️ Seguridad y Salud Ocupacional</h4>
+                <p>Prevención de riesgos laborales, comités paritarios, normativas MDT/IESS y programas de salud psicosocial.</p>
               </div>
-              <div style={{ padding: '1rem' }}>
-                <h4 style={{ color: '#38bdf8', fontSize: '1.1rem', marginBottom: '0.5rem' }}>📈 Marketing, Ventas y Servicio</h4>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: '1.6' }}>Técnicas de negociación, servicio al cliente de excelencia y efectividad comercial.</p>
+              <div className="training-pillar-card">
+                <h4>📈 Marketing, Ventas y Servicio</h4>
+                <p>Técnicas de negociación, servicio al cliente de excelencia y efectividad comercial omnicanal.</p>
               </div>
             </div>
           </div>

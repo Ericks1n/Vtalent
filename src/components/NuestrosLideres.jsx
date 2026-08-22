@@ -89,17 +89,17 @@ export default function NuestrosLideres() {
             <div className="leader-card">
               <div style={{ width: '100%', height: '250px', overflow: 'hidden', borderBottom: '1px solid var(--border-light)' }}>
                 <img 
-                  src="/ricardo_pavon.png" 
-                  alt="Ricardo Pavon - Especialista Jurídico" 
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }} 
+                  src="/fabricio_gomez.png" 
+                  alt="Fabricio Gómez - Consultor Senior" 
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%' }} 
                 />
               </div>
               <div className="leader-info">
-                <h3>Ricardo Pavon</h3>
-                <span className="leader-role">Especialista Jurídico</span>
-                <span className="leader-subtitle">Master en Derecho Laboral</span>
+                <h3>Fabricio Gómez</h3>
+                <span className="leader-role">Consultor Senior</span>
+                <span className="leader-subtitle">Especialista en Seguridad, Salud Ocupacional y Sistemas ISO</span>
                 <p className="leader-bio">
-                  Abogado con más de 21 años en Derecho Laboral. Trayectoria pública como Director Regional del Trabajo, Inspector del Trabajo y Jefe de los Jueces de Trabajo de Pichincha.
+                  +8 años de experiencia en gestión de riesgos laborales, diseño e implementación de sistemas de gestión y auditorías internas ISO (9001, 14001, 45001), matrices de cumplimiento legal, planes de autoprotección, brigadas y simulacros.
                 </p>
               </div>
             </div>

@@ -56,6 +56,13 @@ section, header {
   overflow: hidden;
 }
 
+section[id],
+header[id],
+div[id],
+span[id] {
+  scroll-margin-top: 90px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 700;
@@ -283,6 +290,66 @@ a {
   text-shadow: none;
 }
 
+/* Dropdown Navigation Menu (Desktop) */
+.nav-item-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background: #ffffff;
+  min-width: 220px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 0.6rem 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-item-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 0.55rem 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+  text-align: left;
+  transition: var(--transition-smooth);
+  white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+  background: #f1f5f9;
+  color: #4451C5;
+}
+
 .middle-bar-right {
   display: flex;
   align-items: center;
@@ -450,6 +517,75 @@ a {
     left: 0;
     visibility: visible;
     opacity: 1;
+  }
+
+  /* Mobile Dropdowns (Nosotros & Programas Centered) */
+  .nav-item-dropdown {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .nav-item-dropdown.mobile-open .dropdown-arrow-icon {
+    transform: rotate(180deg) !important;
+  }
+
+  .dropdown-menu {
+    position: static;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    background: rgba(68, 81, 197, 0.04);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    margin-top: 0.6rem;
+    width: 85%;
+    max-width: 320px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-item-dropdown.mobile-open .dropdown-menu {
+    display: flex;
+    transform: none;
+  }
+
+  .dropdown-menu li {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .dropdown-menu li a {
+    text-align: center;
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    padding: 0.35rem 0.75rem;
+    white-space: normal;
+  }
+
+  .dropdown-menu li a:hover {
+    background: transparent;
+    color: #4451C5;
   }
 
   /* Mobile menu sections style */
@@ -2030,103 +2166,128 @@ footer {
 }
 
 
-/* Mision y Vision Subpage detailed layout */
+/* Mision y Vision Subpage (Baluartalent Corporate Palette) */
 .mision-vision-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 3rem;
 }
 
 .mision-vision-card {
-  background: var(--bg-card);
+  background: #ffffff;
   border: 1px solid var(--border-light);
-  padding: 4rem 3.5rem;
-  border-radius: 28px;
-  transition: var(--transition-smooth);
+  padding: 3.5rem 3rem;
+  border-radius: 24px;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.mision-vision-accent-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+}
+
+.bar-mision {
+  background: linear-gradient(90deg, #1e40af, #3b82f6);
+}
+
+.bar-vision {
+  background: linear-gradient(90deg, #0d9488, #14b8a6);
 }
 
 .mision-vision-card:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-premium);
-  border-color: var(--border-glow);
+  box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.1);
+}
+
+.card-mision:hover {
+  border-color: rgba(30, 64, 175, 0.3);
+}
+
+.card-vision:hover {
+  border-color: rgba(13, 148, 136, 0.3);
+}
+
+.mision-vision-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+  width: fit-content;
+}
+
+.tag-mision {
+  background: rgba(30, 64, 175, 0.08);
+  color: var(--primary);
+  border: 1px solid rgba(30, 64, 175, 0.18);
+}
+
+.tag-vision {
+  background: rgba(13, 148, 136, 0.08);
+  color: var(--secondary);
+  border: 1px solid rgba(13, 148, 136, 0.18);
 }
 
 .card-icon-wrapper {
-  width: 64px;
-  height: 64px;
-  border-radius: 18px;
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2rem;
-  transition: var(--transition-smooth);
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
 }
 
 .mision-vision-card:hover .card-icon-wrapper {
-  transform: scale(1.1);
+  transform: scale(1.08);
+}
+
+.icon-wrap-mision {
+  background: rgba(30, 64, 175, 0.08);
+  color: var(--primary);
+  border: 1px solid rgba(30, 64, 175, 0.16);
+}
+
+.icon-wrap-vision {
+  background: rgba(13, 148, 136, 0.08);
+  color: var(--secondary);
+  border: 1px solid rgba(13, 148, 136, 0.16);
 }
 
 .mision-vision-card h2 {
-  font-size: 1.8rem;
+  font-size: 1.85rem;
   color: var(--text-heading);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
 }
 
 .mision-vision-card p {
-  line-height: 1.7;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  text-align: justify;
 }
 
 @media (max-width: 992px) {
   .mision-vision-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2rem;
   }
   .mision-vision-card {
-    padding: 3rem 2.5rem;
+    padding: 2.5rem 2rem;
   }
-}
-
-/* Mision y Vision Dark Theme styling (based on Areas de Desarrollo color scheme) */
-.mision-vision-dark-section {
-  background-color: #0a2647;
-  color: #ffffff;
-  position: relative;
-  z-index: 1;
-}
-
-.mision-vision-dark-section .mision-vision-card {
-  background: #0d3054;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-top: 5px solid #f39c12;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-  transition: var(--transition-smooth);
-}
-
-.mision-vision-dark-section .mision-vision-card:hover {
-  border-color: rgba(243, 156, 18, 0.4);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 25px rgba(243, 156, 18, 0.15);
-  transform: translateY(-6px);
-}
-
-.mision-vision-dark-section .mision-vision-card h2 {
-  color: #ffffff;
-}
-
-.mision-vision-dark-section .mision-vision-card p {
-  color: #cbd5e1;
-}
-
-.mision-vision-dark-section .btn-secondary {
-  color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.25);
-  background: transparent;
-}
-
-.mision-vision-dark-section .btn-secondary:hover {
-  border-color: #f39c12;
-  color: #f39c12;
-  background: rgba(243, 156, 18, 0.05);
 }
 
 
@@ -2483,6 +2644,498 @@ footer {
 
   .node-icon-wrapper {
     justify-content: flex-start !important;
+  }
+}
+
+/* ==========================================================================
+   VARIANT 1: GESTIÓN DE NÓMINA (Pipeline Workflow)
+   ========================================================================== */
+.payroll-pipeline-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  position: relative;
+  margin-top: 2.5rem;
+}
+
+.payroll-pipeline-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  padding: 2.4rem 1.6rem 2rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+}
+
+.payroll-pipeline-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.09);
+  border-color: rgba(30, 64, 175, 0.3);
+}
+
+.payroll-step-badge {
+  position: absolute;
+  top: -12px;
+  left: 1.5rem;
+  background: linear-gradient(135deg, var(--primary) 0%, #3b82f6 100%);
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(30, 64, 175, 0.3);
+}
+
+.payroll-pipeline-card:nth-child(2) .payroll-step-badge {
+  background: linear-gradient(135deg, var(--secondary) 0%, #14b8a6 100%);
+  box-shadow: 0 4px 10px rgba(13, 148, 136, 0.3);
+}
+
+.payroll-pipeline-card:nth-child(3) .payroll-step-badge {
+  background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%);
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+}
+
+.payroll-pipeline-card:nth-child(4) .payroll-step-badge {
+  background: linear-gradient(135deg, var(--accent) 0%, #fbbf24 100%);
+  box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);
+}
+
+.payroll-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.4rem;
+  margin-bottom: 1.2rem;
+  background: rgba(30, 64, 175, 0.07);
+  color: var(--primary);
+  border: 1px solid rgba(30, 64, 175, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.payroll-pipeline-card:nth-child(2) .payroll-icon-box {
+  background: rgba(13, 148, 136, 0.07);
+  color: var(--secondary);
+  border-color: rgba(13, 148, 136, 0.15);
+}
+
+.payroll-pipeline-card:nth-child(3) .payroll-icon-box {
+  background: rgba(99, 102, 241, 0.07);
+  color: #6366f1;
+  border-color: rgba(99, 102, 241, 0.15);
+}
+
+.payroll-pipeline-card:nth-child(4) .payroll-icon-box {
+  background: rgba(245, 158, 11, 0.08);
+  color: #d97706;
+  border-color: rgba(245, 158, 11, 0.2);
+}
+
+.payroll-pipeline-card:hover .payroll-icon-box {
+  transform: scale(1.1);
+}
+
+.payroll-pipeline-card h3 {
+  font-size: 1.05rem;
+  color: var(--text-heading);
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+  font-weight: 700;
+  min-height: 2.8rem;
+}
+
+.payroll-pipeline-card p {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  text-align: left;
+}
+
+.payroll-benefits-matrix {
+  margin-top: 4.5rem;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border-radius: 24px;
+  padding: 3.5rem 2.5rem;
+  color: #ffffff;
+  box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.payroll-benefits-matrix h3 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.payroll-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.payroll-benefit-item {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 2rem 1.6rem;
+  transition: var(--transition-smooth);
+}
+
+.payroll-benefit-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(56, 189, 248, 0.3);
+  transform: translateY(-4px);
+}
+
+.payroll-benefit-item h4 {
+  font-size: 1.15rem;
+  color: #38bdf8;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.payroll-benefit-item p {
+  color: #cbd5e1;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+@media (max-width: 1100px) {
+  .payroll-pipeline-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .payroll-pipeline-grid {
+    grid-template-columns: 1fr;
+  }
+  .payroll-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   VARIANT 2: ASESORÍA JURÍDICA Y LEGAL (2x2 Defense Matrix)
+   ========================================================================== */
+.legal-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.2rem;
+  margin-top: 2.5rem;
+}
+
+.legal-shield-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 22px;
+  padding: 2.8rem 2.2rem;
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.legal-shield-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
+  border-color: rgba(30, 64, 175, 0.25);
+}
+
+.legal-shield-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(30, 64, 175, 0.08);
+  color: var(--primary);
+  border: 1px solid rgba(30, 64, 175, 0.16);
+  transition: transform 0.3s ease;
+}
+
+.legal-shield-card:hover .legal-shield-icon-wrapper {
+  transform: scale(1.1);
+}
+
+.legal-shield-content {
+  flex: 1;
+}
+
+.legal-shield-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--primary);
+  background: rgba(30, 64, 175, 0.08);
+  padding: 0.2rem 0.65rem;
+  border-radius: 50px;
+  margin-bottom: 0.75rem;
+}
+
+.legal-shield-card h3 {
+  font-size: 1.22rem;
+  color: var(--text-heading);
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.legal-shield-card p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  text-align: justify;
+}
+
+.legal-value-banner {
+  margin-top: 4.5rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid var(--border-light);
+  border-radius: 22px;
+  padding: 3rem 2.5rem;
+  border-left: 6px solid var(--primary);
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.04);
+}
+
+.legal-value-banner h3 {
+  font-size: 1.5rem;
+  color: var(--text-heading);
+  text-align: center;
+  margin-bottom: 2.2rem;
+}
+
+.legal-value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.legal-value-item {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  padding: 1.8rem 1.4rem;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.02);
+  transition: var(--transition-smooth);
+}
+
+.legal-value-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(30, 64, 175, 0.2);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.legal-value-item h4 {
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.legal-value-item p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  text-align: left;
+}
+
+@media (max-width: 992px) {
+  .legal-matrix-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .legal-value-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   VARIANT 3: CAPACITACIÓN CORPORATIVA (Modular Learning Tracks)
+   ========================================================================== */
+.training-tracks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.training-track-row {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.training-track-row:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.07);
+  border-color: rgba(13, 148, 136, 0.25);
+}
+
+.training-track-number-col {
+  background: linear-gradient(180deg, rgba(13, 148, 136, 0.08) 0%, rgba(30, 64, 175, 0.08) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--border-light);
+  padding: 1.5rem 1rem;
+}
+
+.training-track-num {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--secondary);
+  font-family: var(--font-heading);
+  line-height: 1;
+}
+
+.training-track-tag {
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-top: 0.4rem;
+  letter-spacing: 0.05em;
+}
+
+.training-track-body {
+  padding: 1.8rem 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.training-track-content {
+  flex: 1;
+}
+
+.training-track-content h3 {
+  font-size: 1.25rem;
+  color: var(--text-heading);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.training-track-content p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  text-align: left;
+}
+
+.training-track-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: rgba(13, 148, 136, 0.08);
+  color: var(--secondary);
+  border: 1px solid rgba(13, 148, 136, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.training-track-row:hover .training-track-icon {
+  transform: scale(1.1);
+}
+
+.training-pillars-showcase {
+  margin-top: 4.5rem;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 24px;
+  padding: 3.5rem 2.5rem;
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.04);
+}
+
+.training-pillars-showcase h3 {
+  font-size: 1.5rem;
+  color: var(--text-heading);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.training-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.training-pillar-card {
+  background: #f8fafc;
+  border: 1px solid var(--border-light);
+  border-radius: 18px;
+  padding: 2rem 1.6rem;
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.training-pillar-card:hover {
+  transform: translateY(-4px);
+  background: #ffffff;
+  border-color: rgba(13, 148, 136, 0.3);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+}
+
+.training-pillar-card h4 {
+  font-size: 1.12rem;
+  color: var(--text-heading);
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+}
+
+.training-pillar-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  text-align: left;
+}
+
+@media (max-width: 850px) {
+  .training-track-row {
+    grid-template-columns: 1fr;
+  }
+  .training-track-number-col {
+    border-right: none;
+    border-bottom: 1px solid var(--border-light);
+    flex-direction: row;
+    gap: 0.6rem;
+    padding: 0.8rem 1rem;
+  }
+  .training-track-body {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+  .training-pillars-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -3170,7 +3823,7 @@ footer {
 
 /* Instructor Area */
 .compact-instructor-area {
-  margin: auto 1.15rem 1.15rem 1.15rem;
+  margin: auto 1.15rem 0.6rem 1.15rem;
   padding-top: 0.65rem;
   border-top: 1px dashed var(--border-light);
   display: flex;
@@ -3182,6 +3835,7 @@ footer {
   font-size: 0.68rem;
   color: var(--text-muted);
   text-transform: uppercase;
+  font-weight: 600;
   flex-shrink: 0;
 }
 
@@ -3192,6 +3846,66 @@ footer {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* Course Card Footer (Price Tag + WhatsApp CTA) */
+.compact-card-footer {
+  margin: 0 1.15rem 1.15rem 1.15rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.compact-price-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.compact-price-label {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  margin-bottom: 0.15rem;
+}
+
+.compact-price-val {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  line-height: 1.1;
+}
+
+.compact-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.85rem;
+  background: #25D366;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 3px 10px rgba(37, 211, 102, 0.3);
+  transition: var(--transition-smooth);
+  flex-shrink: 0;
+}
+
+.compact-whatsapp-btn:hover {
+  background: #1eb956;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.45);
+}
+
+.compact-whatsapp-btn svg {
+  flex-shrink: 0;
 }
 
 /* Empty State */
@@ -3223,64 +3937,140 @@ footer {
   text-align: center;
 }
 
-/* Methodology Section */
+/* Methodology Section (Baluartalent Corporate Palette) */
 .courses-methodology-section {
-  margin-top: 3.5rem;
+  margin-top: 4rem;
   margin-bottom: 4rem;
-  background: #f8fafc;
-  border-radius: 20px;
-  padding: 3rem 2rem;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 24px;
+  padding: 3.5rem 2.5rem;
   border: 1px solid var(--border-light);
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+.courses-methodology-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
 }
 
 .methodology-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
 }
 
 .methodology-card {
   background: #ffffff;
   border: 1px solid var(--border-light);
-  border-radius: 14px;
-  padding: 1.75rem 1.25rem;
+  border-radius: 18px;
+  padding: 2rem 1.4rem 1.6rem 1.4rem;
   position: relative;
-  transition: var(--transition-smooth);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-.methodology-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
-  border-color: rgba(30, 64, 175, 0.2);
+.methodology-accent-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  opacity: 0.85;
 }
+
+.bar-primary { background: linear-gradient(90deg, #1e40af, #3b82f6); }
+.bar-secondary { background: linear-gradient(90deg, #0d9488, #14b8a6); }
+.bar-accent { background: linear-gradient(90deg, #d97706, #f59e0b); }
+.bar-indigo { background: linear-gradient(90deg, #4f46e5, #818cf8); }
+
+.methodology-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+}
+
+.methodology-card-primary:hover { border-color: rgba(30, 64, 175, 0.3); }
+.methodology-card-secondary:hover { border-color: rgba(13, 148, 136, 0.3); }
+.methodology-card-accent:hover { border-color: rgba(245, 158, 11, 0.3); }
+.methodology-card-indigo:hover { border-color: rgba(79, 70, 229, 0.3); }
 
 .methodology-number {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 1.3rem;
+  top: 1.2rem;
+  right: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 900;
-  color: rgba(30, 64, 175, 0.12);
   font-family: var(--font-heading);
+  line-height: 1;
+  opacity: 0.18;
 }
 
-.methodology-icon {
-  font-size: 2rem;
-  margin-bottom: 0.75rem;
+.methodology-card-primary .methodology-number { color: #1e40af; }
+.methodology-card-secondary .methodology-number { color: #0d9488; }
+.methodology-card-accent .methodology-number { color: #d97706; }
+.methodology-card-indigo .methodology-number { color: #4f46e5; }
+
+.methodology-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.methodology-card:hover .methodology-icon-wrap {
+  transform: scale(1.08);
+}
+
+.icon-wrap-primary {
+  background: rgba(30, 64, 175, 0.08);
+  color: #1e40af;
+  border: 1px solid rgba(30, 64, 175, 0.15);
+}
+
+.icon-wrap-secondary {
+  background: rgba(13, 148, 136, 0.08);
+  color: #0d9488;
+  border: 1px solid rgba(13, 148, 136, 0.15);
+}
+
+.icon-wrap-accent {
+  background: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.icon-wrap-indigo {
+  background: rgba(79, 70, 229, 0.08);
+  color: #4f46e5;
+  border: 1px solid rgba(79, 70, 229, 0.15);
 }
 
 .methodology-card h4 {
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: var(--text-heading);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
   line-height: 1.35;
+  font-weight: 700;
 }
 
 .methodology-card p {
-  font-size: 0.84rem;
+  font-size: 0.83rem;
   color: var(--text-muted);
   line-height: 1.55;
+  text-align: left;
 }
 
 

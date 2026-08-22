@@ -79,41 +79,37 @@ export default function AsesoriaJuridica() {
             </p>
           </div>
 
-          {/* Pillars Grid */}
-          <div className="timeline-container">
-            <div className="timeline-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))' }}>
-              {SERVICES_LIST.map((item, index) => (
-                <div key={index} className="timeline-node">
-                  <div className={`node-circle ${item.colorClass}`}>
-                    {item.num}
-                  </div>
-                  <div className="node-card" style={{ height: '100%' }}>
-                    <div className="node-icon-wrapper" style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem', color: '#38bdf8' }}>
-                      {item.icon}
-                    </div>
-                    <h3>{item.title}</h3>
-                    <p>{item.desc}</p>
-                  </div>
+          {/* Legal Shield Matrix Grid */}
+          <div className="legal-matrix-grid">
+            {SERVICES_LIST.map((item, index) => (
+              <div key={index} className="legal-shield-card">
+                <div className="legal-shield-icon-wrapper">
+                  {item.icon}
                 </div>
-              ))}
-            </div>
+                <div className="legal-shield-content">
+                  <span className="legal-shield-badge">Eje {item.num}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
 
-          {/* Key Differentiators */}
-          <div style={{ marginTop: '5rem', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '20px', padding: '3rem 2rem', backdropFilter: 'blur(10px)' }}>
-            <h3 style={{ fontSize: '1.5rem', fontWeight: '700', marginBottom: '1.5rem', color: '#ffffff', textAlign: 'center' }}>Propuesta de Valor Legal</h3>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem', marginTop: '2rem' }}>
-              <div style={{ padding: '1rem' }}>
-                <h4 style={{ color: '#38bdf8', fontSize: '1.1rem', marginBottom: '0.5rem' }}>⚖️ Enfoque Preventivo</h4>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: '1.6' }}>Anticipamos y solucionamos conflictos laborales antes de que se conviertan en litigios costosos para la empresa.</p>
+          {/* Key Differentiators Banner */}
+          <div className="legal-value-banner">
+            <h3>Propuesta de Valor Legal</h3>
+            <div className="legal-value-grid">
+              <div className="legal-value-item">
+                <h4>⚖️ Enfoque Preventivo</h4>
+                <p>Anticipamos y solucionamos conflictos laborales antes de que se conviertan en litigios costosos para la empresa.</p>
               </div>
-              <div style={{ padding: '1rem' }}>
-                <h4 style={{ color: '#38bdf8', fontSize: '1.1rem', marginBottom: '0.5rem' }}>📄 Rigor Técnico y Normativo</h4>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: '1.6' }}>Alineación estricta al Código del Trabajo, mandatos constitucionales y acuerdos del Ministerio del Trabajo.</p>
+              <div className="legal-value-item">
+                <h4>📄 Rigor Técnico y Normativo</h4>
+                <p>Alineación estricta al Código del Trabajo, mandatos constitucionales y acuerdos del Ministerio del Trabajo.</p>
               </div>
-              <div style={{ padding: '1rem' }}>
-                <h4 style={{ color: '#38bdf8', fontSize: '1.1rem', marginBottom: '0.5rem' }}>🤝 Acompañamiento Continuo</h4>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: '1.6' }}>Soporte consultivo oportuno en la toma de decisiones complejas respecto a personal y desvinculaciones.</p>
+              <div className="legal-value-item">
+                <h4>🤝 Acompañamiento Continuo</h4>
+                <p>Soporte consultivo oportuno en la toma de decisiones complejas respecto a personal y desvinculaciones.</p>
               </div>
             </div>
           </div>

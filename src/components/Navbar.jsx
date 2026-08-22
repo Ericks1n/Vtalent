@@ -12,6 +12,45 @@ export default function Navbar({ onOpenContact }) {
     setMobileServiciosOpen(false);
   };
 
+  const navigateTo = (e, href) => {
+    closeMobileMenus();
+    if (href.startsWith('#/')) {
+      // Subpage routing
+      if (window.location.hash === href) {
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      } else {
+        window.location.hash = href;
+      }
+    } else if (href === '#' || href === '#inicio') {
+      e.preventDefault();
+      if (window.location.hash && window.location.hash !== '#' && window.location.hash !== '#inicio') {
+        window.location.hash = '#';
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (href.startsWith('#')) {
+      e.preventDefault();
+      const targetId = href.replace('#', '');
+      const onSubpage = window.location.hash && window.location.hash.startsWith('#/');
+      if (onSubpage) {
+        window.location.hash = href;
+      } else {
+        if (window.location.hash !== href) {
+          window.location.hash = href;
+        }
+        const element = document.getElementById(targetId);
+        if (element) {
+          const nav = document.querySelector('.navbar');
+          const navHeight = nav ? nav.offsetHeight : 80;
+          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({
+            top: elementPosition - navHeight - 15,
+            behavior: 'smooth'
+          });
+        }
+      }
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -34,7 +73,7 @@ export default function Navbar({ onOpenContact }) {
             <span className="separator">|</span>
             <a href="mailto:info@baluartalent.com">info@baluartalent.com</a>
             <span className="separator">|</span>
-            <a href="#/cursos">Cursos Aula Virtual</a>
+            <a href="https://aula.baluartalent.com" target="_blank" rel="noopener noreferrer">Cursos Aula Virtual</a>
           </div>
         </div>
       </div>
@@ -42,7 +81,7 @@ export default function Navbar({ onOpenContact }) {
       {/* 2. MIDDLE BAR (Fila Media - Navegación Principal) */}
       <div className="navbar-middle-bar">
         <div className="container middle-bar-container">
-          <a href="#" className="logo">
+          <a href="#" className="logo" onClick={(e) => navigateTo(e, '#')}>
             <img 
               src="/logo.png" 
               alt="BALUARTALENT & Co." 
@@ -56,7 +95,7 @@ export default function Navbar({ onOpenContact }) {
 
           {/* Menú de Navegación Principal */}
           <ul className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>
-            <li><a href="#" className="active" onClick={closeMobileMenus}>INICIO</a></li>
+            <li><a href="#" className="active" onClick={(e) => navigateTo(e, '#')}>INICIO</a></li>
             <li className={`nav-item-dropdown ${mobileNosotrosOpen ? 'mobile-open' : ''}`}>
               <a 
                 href="#nosotros" 
@@ -72,9 +111,9 @@ export default function Navbar({ onOpenContact }) {
                 </svg>
               </a>
               <ul className="dropdown-menu">
-                <li><a href="#/nuestros-lideres" onClick={closeMobileMenus}>Nuestros líderes</a></li>
-                <li><a href="#/mision-vision" onClick={closeMobileMenus}>Misión y Visión</a></li>
-                <li><a href="#/valores-corporativos" onClick={closeMobileMenus}>Valores Corporativos</a></li>
+                <li><a href="#/nuestros-lideres" onClick={(e) => navigateTo(e, '#/nuestros-lideres')}>Nuestros líderes</a></li>
+                <li><a href="#/mision-vision" onClick={(e) => navigateTo(e, '#/mision-vision')}>Misión y Visión</a></li>
+                <li><a href="#/valores-corporativos" onClick={(e) => navigateTo(e, '#/valores-corporativos')}>Valores Corporativos</a></li>
               </ul>
             </li>
             <li className={`nav-item-dropdown ${mobileServiciosOpen ? 'mobile-open' : ''}`}>
@@ -92,30 +131,30 @@ export default function Navbar({ onOpenContact }) {
                 </svg>
               </a>
               <ul className="dropdown-menu">
-                <li><a href="#programas-capacitacion" onClick={closeMobileMenus}>Programas de Capacitación</a></li>
-                <li><a href="#/plan-de-accion" onClick={closeMobileMenus}>Plan de Acción</a></li>
-                <li><a href="#/modelo-de-desarrollo" onClick={closeMobileMenus}>Modelo de Desarrollo</a></li>
+                <li><a href="#programas-capacitacion" onClick={(e) => navigateTo(e, '#programas-capacitacion')}>Programas de Capacitación</a></li>
+                <li><a href="#/plan-de-accion" onClick={(e) => navigateTo(e, '#/plan-de-accion')}>Plan de Acción</a></li>
+                <li><a href="#/modelo-de-desarrollo" onClick={(e) => navigateTo(e, '#/modelo-de-desarrollo')}>Modelo de Desarrollo</a></li>
               </ul>
             </li>
-            <li><a href="#/cursos" onClick={closeMobileMenus}>CURSOS</a></li>
-            <li><a href="#casos-de-exito" onClick={closeMobileMenus}>CASOS DE ÉXITO</a></li>
-            <li><a href="#footer-contacto" onClick={closeMobileMenus}>CONTACTO</a></li>
+            <li><a href="#/cursos" onClick={(e) => navigateTo(e, '#/cursos')}>CURSOS</a></li>
+            <li><a href="#casos-de-exito" onClick={(e) => navigateTo(e, '#casos-de-exito')}>CASOS DE ÉXITO</a></li>
+            <li><a href="#footer-contacto" onClick={(e) => navigateTo(e, '#footer-contacto')}>CONTACTO</a></li>
             
             <li className="mobile-only-menu-section">
               <span className="mobile-section-title">Cursos & Aula Virtual</span>
               <ul className="mobile-services-list">
-                <li><a href="#/cursos" onClick={closeMobileMenus}>Catálogo Completo ($50 + IVA)</a></li>
+                <li><a href="#/cursos" onClick={(e) => navigateTo(e, '#/cursos')}>Catálogo Completo</a></li>
               </ul>
             </li>
 
             <li className="mobile-only-menu-section">
               <span className="mobile-section-title">Programas de Capacitación</span>
               <ul className="mobile-services-list">
-                <li><a href="#programas-capacitacion" onClick={closeMobileMenus}>Gestión del Talento Humano</a></li>
-                <li><a href="#programas-capacitacion" onClick={closeMobileMenus}>Seguridad y Salud Ocupacional</a></li>
-                <li><a href="#programas-capacitacion" onClick={closeMobileMenus}>Marketing, Ventas y Servicio</a></li>
-                <li><a href="#programas-capacitacion" onClick={closeMobileMenus}>Desarrollo Organizacional</a></li>
-                <li><a href="#programas-capacitacion" onClick={closeMobileMenus}>Asesorías Especializadas</a></li>
+                <li><a href="#programas-capacitacion" onClick={(e) => navigateTo(e, '#programas-capacitacion')}>Gestión del Talento Humano</a></li>
+                <li><a href="#programas-capacitacion" onClick={(e) => navigateTo(e, '#programas-capacitacion')}>Seguridad y Salud Ocupacional</a></li>
+                <li><a href="#programas-capacitacion" onClick={(e) => navigateTo(e, '#programas-capacitacion')}>Marketing, Ventas y Servicio</a></li>
+                <li><a href="#programas-capacitacion" onClick={(e) => navigateTo(e, '#programas-capacitacion')}>Desarrollo Organizacional</a></li>
+                <li><a href="#programas-capacitacion" onClick={(e) => navigateTo(e, '#programas-capacitacion')}>Asesorías Especializadas</a></li>
               </ul>
             </li>
 

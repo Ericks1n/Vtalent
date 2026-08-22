@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import AreasDesarrollo from './components/AreasDesarrollo';
@@ -19,9 +19,28 @@ import AsesoriaJuridica from './components/AsesoriaJuridica';
 import CapacitacionCorporativa from './components/CapacitacionCorporativa';
 import Cursos from './components/Cursos';
 
+export const scrollToSection = (targetId, smooth = true) => {
+  if (!targetId || targetId === 'inicio' || targetId === 'top') {
+    window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'instant' });
+    return;
+  }
+  const element = document.getElementById(targetId);
+  if (element) {
+    const nav = document.querySelector('.navbar');
+    const navHeight = nav ? nav.offsetHeight : 80;
+    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+    const offsetPosition = elementPosition - navHeight - 15;
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: smooth ? 'smooth' : 'instant'
+    });
+  }
+};
+
 function App() {
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [currentView, setCurrentView] = useState('home');
+  const pendingScrollRef = useRef(null);
 
   const handleOpenContact = () => setIsContactOpen(true);
   const handleCloseContact = () => setIsContactOpen(false);
@@ -57,17 +76,19 @@ function App() {
         setCurrentView('cursos');
         window.scrollTo({ top: 0, behavior: 'instant' });
       } else {
-        setCurrentView('home');
-        // If it's a home anchor scroll, let the browser handle it or scroll to it
-        if (hash && !hash.startsWith('#/')) {
-          const id = hash.substring(1);
-          const element = document.getElementById(id);
-          if (element) {
-            setTimeout(() => {
-              element.scrollIntoView({ behavior: 'smooth' });
-            }, 100);
+        const id = hash && !hash.startsWith('#/') ? hash.substring(1) : null;
+        setCurrentView((prev) => {
+          if (prev !== 'home') {
+            pendingScrollRef.current = id;
+            return 'home';
           }
-        }
+          if (id) {
+            scrollToSection(id, true);
+          } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+          return 'home';
+        });
       }
     };
 
@@ -75,6 +96,20 @@ function App() {
     window.addEventListener('hashchange', handleHashChange);
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
+
+  // When returning from a subpage to home, immediately scroll to the target section once home mounts
+  useEffect(() => {
+    if (currentView === 'home') {
+      if (pendingScrollRef.current) {
+        const targetId = pendingScrollRef.current;
+        pendingScrollRef.current = null;
+        const timer = setTimeout(() => {
+          scrollToSection(targetId, true);
+        }, 40);
+        return () => clearTimeout(timer);
+      }
+    }
+  }, [currentView]);
 
   const renderContent = () => {
     switch (currentView) {
@@ -123,3 +158,4 @@ function App() {
 }
 
 export default App;
+
