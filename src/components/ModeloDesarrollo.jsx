@@ -77,25 +77,20 @@ export default function ModeloDesarrollo() {
             </p>
           </div>
 
-          {/* Horizontal Timeline */}
-          <div className="timeline-container">
-            <div className="timeline-line"></div>
-            <div className="timeline-grid">
-              {FASES.map((fase, index) => (
-                <div key={index} className="timeline-node">
-                  <div className={`node-circle ${fase.colorClass}`}>
-                    {fase.num}
-                  </div>
-                  <div className="node-card">
-                    <div className="node-icon-wrapper" style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem' }}>
-                      {fase.icon}
-                    </div>
-                    <h3>{fase.title}</h3>
-                    <p>{fase.desc}</p>
-                  </div>
+          {/* Strategic Model Matrix (4 Quadrants) */}
+          <div className="dev-model-matrix">
+            {FASES.map((fase, index) => (
+              <div key={index} className="dev-model-card">
+                <div className="dev-model-num-badge">
+                  {fase.num}
                 </div>
-              ))}
-            </div>
+                <div className="dev-model-content">
+                  <span className="dev-model-tag">Etapa Estratégica</span>
+                  <h3>{fase.title}</h3>
+                  <p>{fase.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
 
           {/* Slogan Banner */}

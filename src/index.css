@@ -2648,6 +2648,237 @@ footer {
 }
 
 /* ==========================================================================
+   PLAN DE ACCIÓN - Step-by-Step Action Roadmap
+   ========================================================================== */
+.action-plan-stepper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+  position: relative;
+}
+
+.action-step-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  padding: 2.2rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+}
+
+.action-step-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.09);
+  border-color: rgba(30, 64, 175, 0.3);
+}
+
+.action-step-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+.action-step-badge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  color: #ffffff;
+}
+
+.action-step-card:nth-child(1) .action-step-badge {
+  background: linear-gradient(135deg, var(--secondary) 0%, #14b8a6 100%);
+  box-shadow: 0 4px 10px rgba(13, 148, 136, 0.3);
+}
+
+.action-step-card:nth-child(2) .action-step-badge {
+  background: linear-gradient(135deg, var(--primary) 0%, #3b82f6 100%);
+  box-shadow: 0 4px 10px rgba(30, 64, 175, 0.3);
+}
+
+.action-step-card:nth-child(3) .action-step-badge {
+  background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%);
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+}
+
+.action-step-card:nth-child(4) .action-step-badge {
+  background: linear-gradient(135deg, var(--accent) 0%, #fbbf24 100%);
+  box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);
+}
+
+.action-step-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(30, 64, 175, 0.06);
+  color: var(--primary);
+  border: 1px solid rgba(30, 64, 175, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.action-step-card:nth-child(1) .action-step-icon {
+  background: rgba(13, 148, 136, 0.06);
+  color: var(--secondary);
+  border-color: rgba(13, 148, 136, 0.12);
+}
+
+.action-step-card:nth-child(3) .action-step-icon {
+  background: rgba(99, 102, 241, 0.06);
+  color: #6366f1;
+  border-color: rgba(99, 102, 241, 0.12);
+}
+
+.action-step-card:nth-child(4) .action-step-icon {
+  background: rgba(245, 158, 11, 0.06);
+  color: #d97706;
+  border-color: rgba(245, 158, 11, 0.15);
+}
+
+.action-step-card:hover .action-step-icon {
+  transform: scale(1.1);
+}
+
+.action-step-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+.action-step-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  text-align: left;
+}
+
+@media (max-width: 992px) {
+  .action-plan-stepper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .action-plan-stepper {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   MODELO DE DESARROLLO - 4 Quadrant Strategic Framework Matrix
+   ========================================================================== */
+.dev-model-matrix {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.dev-model-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 22px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+}
+
+.dev-model-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
+  border-color: rgba(13, 148, 136, 0.3);
+}
+
+.dev-model-num-badge {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.3rem;
+  background: linear-gradient(135deg, rgba(30, 64, 175, 0.08) 0%, rgba(13, 148, 136, 0.08) 100%);
+  color: var(--primary);
+  border: 1px solid rgba(30, 64, 175, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.dev-model-card:hover .dev-model-num-badge {
+  transform: scale(1.1);
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.dev-model-card:nth-child(2):hover .dev-model-num-badge {
+  background: var(--secondary);
+}
+
+.dev-model-card:nth-child(3):hover .dev-model-num-badge {
+  background: #6366f1;
+}
+
+.dev-model-card:nth-child(4):hover .dev-model-num-badge {
+  background: var(--accent);
+}
+
+.dev-model-content {
+  flex: 1;
+}
+
+.dev-model-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--secondary);
+  background: rgba(13, 148, 136, 0.08);
+  padding: 0.2rem 0.65rem;
+  border-radius: 50px;
+  margin-bottom: 0.6rem;
+}
+
+.dev-model-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.dev-model-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  text-align: left;
+}
+
+@media (max-width: 850px) {
+  .dev-model-matrix {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
    VARIANT 1: GESTIÓN DE NÓMINA (Pipeline Workflow)
    ========================================================================== */
 .payroll-pipeline-grid {

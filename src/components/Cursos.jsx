@@ -14,8 +14,8 @@ const COURSES_DATA = [
     level: 'Todos los niveles',
     duration: '40 Horas',
     modality: 'Modalidad Virtual',
-    instructor: 'Mgtr. Mabel Ramos Rivadeneira',
-    image: '/courses/curso_1.jpg',
+    instructor: 'Ing. Anita Barrios',
+    image: '/courses/curso_1.png',
     shortDesc: 'Administración estratégica del talento humano y marco laboral ecuatoriano: contratos en el portal SUT, cálculo de nómina y recargos horarios, aportaciones al IESS, décimos, fondos de reserva, reglamentos internos y finiquitos.',
     colorAccent: '#1e40af',
     highlights: [
@@ -33,8 +33,8 @@ const COURSES_DATA = [
     level: 'Directivo / Mandos Medios',
     duration: '40 Horas',
     modality: 'Modalidad Virtual',
-    instructor: 'Mgtr. Mabel Ramos Rivadeneira',
-    image: '/courses/curso_2.jpg',
+    instructor: 'Ing. Anita Barrios',
+    image: '/courses/curso_2.png',
     shortDesc: 'Desarrollo de liderazgo transformacional, inteligencia emocional y gestión del tiempo (Matriz de Eisenhower), comunicación asertiva, retroalimentación (modelo SBI) y resolución de conflictos para guiar equipos de alto desempeño.',
     colorAccent: '#6366f1',
     highlights: [
@@ -53,7 +53,7 @@ const COURSES_DATA = [
     duration: '40 Horas',
     modality: 'Modalidad Virtual',
     instructor: 'MBA. Jorge Macías Robles',
-    image: '/courses/curso_3.jpg',
+    image: '/courses/curso_3.png',
     shortDesc: 'Diseño de experiencias memorables del cliente (CX) y marketing digital omnicanal: dominio del embudo de conversión (AIDA), métricas clave (NPS, CAC, LTV), recuperación de clientes insatisfechos y posicionamiento orgánico.',
     colorAccent: '#0d9488',
     highlights: [
@@ -65,21 +65,21 @@ const COURSES_DATA = [
   },
   {
     id: 4,
-    title: 'Gestión de Almacenes y Logística Automatizada',
+    title: 'Gestión de Proveedores y Negociación en Compras',
     category: 'Gestión & Compras',
     price: '$50 + IVA',
     level: 'Intermedio - Avanzado',
     duration: '40 Horas',
     modality: 'Modalidad Virtual',
     instructor: 'MBA. Jorge Macías Robles',
-    image: '/courses/curso_4.jpg',
-    shortDesc: 'Optimización integral de almacenes y cadenas de suministro automatizadas: control de inventarios, sistemas WMS/ERP, automatización con vehículos autónomos (AGV), trazabilidad y eficiencia operativa.',
+    image: '/courses/curso_4.png',
+    shortDesc: 'Optimización de compras estratégicas y abastecimiento: análisis del impacto en el EBITDA, segmentación con Matriz de Kraljic, homologación y auditoría de proveedores (OTIF), Costo Total de Propiedad (TCO) y negociación B2B.',
     colorAccent: '#d97706',
     highlights: [
-      'Gestión y control de inventarios WMS',
-      'Automatización y robótica en almacenamiento',
-      'Layout de almacén y preparación de pedidos',
-      'Indicadores de rendimiento logístico (KPIs)'
+      'Matriz de Kraljic y categorización de compras',
+      'Homologación y evaluación de proveedores',
+      'Técnicas de negociación y control de costos',
+      'Estructuración de contratos y acuerdos SLA'
     ]
   },
   {
@@ -110,7 +110,7 @@ const COURSES_DATA = [
     duration: '40 Horas',
     modality: 'Modalidad Virtual',
     instructor: 'Dr. Héctor Cevallos Fernandez',
-    image: '/courses/curso_6.jpg',
+    image: '/courses/curso_6.png',
     shortDesc: 'Cumplimiento del marco regulatorio ambiental (COA y RCOA): trámites de regularización en el SUIA (Registros y Licencias), implementación del Plan de Manejo Ambiental (PMA), gestión de desechos peligrosos y auditorías ambientales.',
     colorAccent: '#059669',
     highlights: [
@@ -128,8 +128,8 @@ const COURSES_DATA = [
     level: 'Intermedio - Avanzado',
     duration: '40 Horas',
     modality: 'Modalidad Virtual',
-    instructor: 'Mgtr. Fabricio Gómez Vallejo',
-    image: '/courses/curso_7.jpg',
+    instructor: 'Ing. Juan Jose Piguabe',
+    image: '/courses/curso_7.png',
     shortDesc: 'Identificación de peligros y evaluación de riesgos bajo normativa legal vigente de SST: control operacional en procesos industriales, planes de prevención y mitigación de accidentes de trabajo y enfermedades profesionales.',
     colorAccent: '#f59e0b',
     highlights: [
@@ -147,8 +147,8 @@ const COURSES_DATA = [
     level: 'Todos los niveles',
     duration: '40 Horas',
     modality: 'Modalidad Virtual',
-    instructor: 'Mgtr. Fabricio Gómez Vallejo',
-    image: '/courses/curso_8.jpg',
+    instructor: 'Ing. Juan Jose Piguabe',
+    image: '/courses/curso_8.png',
     shortDesc: 'Competencias técnicas en protección contra caídas y trabajo en alturas (>1.80m): análisis normativo OSHA/ANSI, inspección y uso de Equipos de Protección Individual (EPI), protocolos de seguridad y planes de rescate industrial.',
     colorAccent: '#ef4444',
     highlights: [
@@ -167,7 +167,7 @@ const COURSES_DATA = [
     duration: '40 Horas',
     modality: 'Modalidad Virtual',
     instructor: 'Mgtr. Lorena Cueva Pungacho',
-    image: '/courses/curso_9.jpg',
+    image: '/courses/curso_9.png',
     shortDesc: 'Programas de salud preventiva y vigilancia epidemiológica ocupacional: diagnóstico de factores de riesgo, profesiogramas, exámenes ocupacionales, estilos de vida saludables y control del ausentismo laboral.',
     colorAccent: '#0284c7',
     highlights: [
@@ -186,7 +186,7 @@ const COURSES_DATA = [
     duration: '40 Horas',
     modality: 'Modalidad Virtual',
     instructor: 'Mgtr. Lorena Cueva Pungacho',
-    image: '/courses/curso_10.jpg',
+    image: '/courses/curso_10.png',
     shortDesc: 'Prevención y gestión del estrés y desgaste psicosocial en las organizaciones: criterios clínicos, neuropsicológicos y liderazgo saludable para prevenir el síndrome de Burnout y fortalecer la sostenibilidad emocional en el trabajo.',
     colorAccent: '#8b5cf6',
     highlights: [

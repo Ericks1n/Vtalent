@@ -78,25 +78,20 @@ export default function PlanDeAccion() {
             </p>
           </div>
 
-          {/* Horizontal Timeline */}
-          <div className="timeline-container">
-            <div className="timeline-line"></div>
-            <div className="timeline-grid">
-              {FASES.map((fase, index) => (
-                <div key={index} className="timeline-node">
-                  <div className={`node-circle ${fase.colorClass}`}>
-                    {fase.num}
-                  </div>
-                  <div className="node-card">
-                    <div className="node-icon-wrapper" style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem' }}>
-                      {fase.icon}
-                    </div>
-                    <h3>{fase.title}</h3>
-                    <p>{fase.desc}</p>
+          {/* Action Plan Stepper */}
+          <div className="action-plan-stepper">
+            {FASES.map((fase, index) => (
+              <div key={index} className="action-step-card">
+                <div className="action-step-header">
+                  <span className="action-step-badge">Fase {fase.num}</span>
+                  <div className="action-step-icon">
+                    {fase.icon}
                   </div>
                 </div>
-              ))}
-            </div>
+                <h3>{fase.title}</h3>
+                <p>{fase.desc}</p>
+              </div>
+            ))}
           </div>
 
           <div style={{ marginTop: '6rem', textAlign: 'center' }}>
