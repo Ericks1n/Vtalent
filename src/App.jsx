@@ -90,6 +90,10 @@ function App() {
           return 'home';
         });
       }
+
+      if (typeof window !== 'undefined' && window.fbq) {
+        window.fbq('track', 'PageView');
+      }
     };
 
     handleHashChange();

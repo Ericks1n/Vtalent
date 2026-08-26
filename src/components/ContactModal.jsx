@@ -28,6 +28,12 @@ export default function ContactModal({ isOpen, onClose }) {
       
       const result = await response.json();
       if (response.ok && result.success === "true") {
+        if (typeof window !== 'undefined' && window.fbq) {
+          window.fbq('track', 'Lead', {
+            content_name: 'Formulario de Contacto / Asesoría',
+            status: 'success'
+          });
+        }
         setSubmitted(true);
         setTimeout(() => {
           setSubmitted(false);
