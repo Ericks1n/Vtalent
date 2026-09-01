@@ -59,7 +59,7 @@ export default function PoliticaPrivacidad() {
                 <li><strong>Razón Comercial:</strong> BALUARTALENT &amp; Co. Consultoría Integral</li>
                 <li><strong>Ubicación:</strong> Av. Naciones Unidas E2-30 - entre Iñaquito y Núñez de Vela. Edificio METROPOLITAN, Piso 4, Oficina 413. Quito, Ecuador.</li>
                 <li><strong>Teléfono de Contacto:</strong> (+593) 2 3617038 / (+593) 964196795</li>
-                <li><strong>Correo Electrónico de Privacidad:</strong> <a href="mailto:info@baluartalent.com" style={{ color: 'var(--primary)', fontWeight: '600' }}>info@baluartalent.com</a></li>
+                <li><strong>Correo Electrónico de Privacidad:</strong> <a href="mailto:administrator@baluartalent.com" style={{ color: 'var(--primary)', fontWeight: '600' }}>administrator@baluartalent.com</a></li>
                 <li><strong>Sitio Web:</strong> <a href="https://baluartalent.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)' }}>https://baluartalent.com</a></li>
               </ul>
             </div>
@@ -190,7 +190,7 @@ export default function PoliticaPrivacidad() {
             </div>
             <div style={{ background: 'rgba(13, 148, 136, 0.05)', border: '1px solid rgba(13, 148, 136, 0.2)', padding: '1.4rem', borderRadius: '12px' }}>
               <p style={{ color: 'var(--text-main)', fontSize: '0.95rem' }}>
-                Para ejercer cualquiera de estos derechos, basta con enviar una solicitud escrita a nuestro Oficial de Privacidad al correo: <a href="mailto:info@baluartalent.com?subject=Solicitud%20de%20Derechos%20de%20Privacidad" style={{ color: 'var(--secondary)', fontWeight: '700' }}>info@baluartalent.com</a> indicando su nombre, documento de identidad y el derecho que desea ejercer. Responderemos a su solicitud en los plazos legalmente establecidos.
+                Para ejercer cualquiera de estos derechos, basta con enviar una solicitud escrita a nuestro Oficial de Privacidad al correo: <a href="mailto:administrator@baluartalent.com?subject=Solicitud%20de%20Derechos%20de%20Privacidad" style={{ color: 'var(--secondary)', fontWeight: '700' }}>administrator@baluartalent.com</a> indicando su nombre, documento de identidad y el derecho que desea ejercer. Responderemos a su solicitud en los plazos legalmente establecidos.
               </p>
             </div>
           </div>

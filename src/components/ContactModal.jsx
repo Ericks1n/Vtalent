@@ -11,7 +11,7 @@ export default function ContactModal({ isOpen, onClose }) {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch("https://formsubmit.co/ajax/info@baluartalent.com", {
+      const response = await fetch("https://formsubmit.co/ajax/administrator@baluartalent.com", {
         method: "POST",
         headers: { 
           'Content-Type': 'application/json',
@@ -44,7 +44,7 @@ export default function ContactModal({ isOpen, onClose }) {
         throw new Error(result.message || "Ocurrió un error al enviar el formulario.");
       }
     } catch (err) {
-      setError("No se pudo enviar el mensaje. Por favor, intenta de nuevo o escríbenos directamente a info@baluartalent.com.");
+      setError("No se pudo enviar el mensaje. Por favor, intenta de nuevo o escríbenos directamente a administrator@baluartalent.com.");
     } finally {
       setLoading(false);
     }
