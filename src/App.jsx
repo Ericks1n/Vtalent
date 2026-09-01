@@ -18,6 +18,7 @@ import GestionNomina from './components/GestionNomina';
 import AsesoriaJuridica from './components/AsesoriaJuridica';
 import CapacitacionCorporativa from './components/CapacitacionCorporativa';
 import Cursos from './components/Cursos';
+import PoliticaPrivacidad from './components/PoliticaPrivacidad';
 
 export const scrollToSection = (targetId, smooth = true) => {
   if (!targetId || targetId === 'inicio' || targetId === 'top') {
@@ -46,37 +47,49 @@ function App() {
   const handleCloseContact = () => setIsContactOpen(false);
 
   useEffect(() => {
-    const handleHashChange = () => {
+    const handleLocationChange = () => {
       const hash = window.location.hash;
-      if (hash === '#/nuestros-lideres') {
+      const path = window.location.pathname.replace(/\/+$/, '');
+
+      if (hash === '#/nuestros-lideres' || path === '/nuestros-lideres') {
         setCurrentView('nuestros-lideres');
         window.scrollTo({ top: 0, behavior: 'instant' });
-      } else if (hash === '#/mision-vision') {
+      } else if (hash === '#/mision-vision' || path === '/mision-vision') {
         setCurrentView('mision-vision');
         window.scrollTo({ top: 0, behavior: 'instant' });
-      } else if (hash === '#/valores-corporativos') {
+      } else if (hash === '#/valores-corporativos' || path === '/valores-corporativos') {
         setCurrentView('valores-corporativos');
         window.scrollTo({ top: 0, behavior: 'instant' });
-      } else if (hash === '#/plan-de-accion') {
+      } else if (hash === '#/plan-de-accion' || path === '/plan-de-accion') {
         setCurrentView('plan-de-accion');
         window.scrollTo({ top: 0, behavior: 'instant' });
-      } else if (hash === '#/modelo-de-desarrollo') {
+      } else if (hash === '#/modelo-de-desarrollo' || path === '/modelo-de-desarrollo') {
         setCurrentView('modelo-de-desarrollo');
         window.scrollTo({ top: 0, behavior: 'instant' });
-      } else if (hash === '#/gestion-de-nomina') {
+      } else if (hash === '#/gestion-de-nomina' || path === '/gestion-de-nomina') {
         setCurrentView('gestion-de-nomina');
         window.scrollTo({ top: 0, behavior: 'instant' });
-      } else if (hash === '#/asesoria-juridica-legal') {
+      } else if (hash === '#/asesoria-juridica-legal' || path === '/asesoria-juridica-legal') {
         setCurrentView('asesoria-juridica-legal');
         window.scrollTo({ top: 0, behavior: 'instant' });
-      } else if (hash === '#/capacitacion-corporativa') {
+      } else if (hash === '#/capacitacion-corporativa' || path === '/capacitacion-corporativa') {
         setCurrentView('capacitacion-corporativa');
         window.scrollTo({ top: 0, behavior: 'instant' });
-      } else if (hash === '#/cursos') {
+      } else if (hash === '#/cursos' || path === '/cursos') {
         setCurrentView('cursos');
         window.scrollTo({ top: 0, behavior: 'instant' });
+      } else if (
+        hash === '#/politica-de-privacidad' || 
+        hash === '#politica-de-privacidad' || 
+        hash === '#/privacidad' || 
+        hash === '#privacidad' || 
+        path === '/politica-de-privacidad' || 
+        path === '/privacidad'
+      ) {
+        setCurrentView('politica-de-privacidad');
+        window.scrollTo({ top: 0, behavior: 'instant' });
       } else {
-        const id = hash && !hash.startsWith('#/') ? hash.substring(1) : null;
+        const id = hash && !hash.startsWith('#/') && !hash.startsWith('#privacidad') && !hash.startsWith('#politica-de-privacidad') ? hash.substring(1) : null;
         setCurrentView((prev) => {
           if (prev !== 'home') {
             pendingScrollRef.current = id;
@@ -96,9 +109,13 @@ function App() {
       }
     };
 
-    handleHashChange();
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    handleLocationChange();
+    window.addEventListener('hashchange', handleLocationChange);
+    window.addEventListener('popstate', handleLocationChange);
+    return () => {
+      window.removeEventListener('hashchange', handleLocationChange);
+      window.removeEventListener('popstate', handleLocationChange);
+    };
   }, []);
 
   // When returning from a subpage to home, immediately scroll to the target section once home mounts
@@ -135,6 +152,8 @@ function App() {
         return <CapacitacionCorporativa />;
       case 'cursos':
         return <Cursos onOpenContact={handleOpenContact} />;
+      case 'politica-de-privacidad':
+        return <PoliticaPrivacidad />;
       case 'home':
       default:
         return (

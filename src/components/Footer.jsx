@@ -98,9 +98,9 @@ export default function Footer() {
         <div className="footer-bottom">
           <p>© 2026 BALUARTALENT & Co. Consultoría Integral. Todos los derechos reservados. Quito, Ecuador.</p>
           <div style={{ display: 'flex', gap: '1rem' }}>
-            <a href="#privacidad" style={{ color: 'var(--text-muted)' }}>Política de Privacidad</a>
+            <a href="#/politica-de-privacidad" style={{ color: 'var(--text-muted)' }}>Política de Privacidad</a>
             <span style={{ color: 'var(--border-light)' }}>|</span>
-            <a href="#terminos" style={{ color: 'var(--text-muted)' }}>Términos y Condiciones</a>
+            <a href="#/politica-de-privacidad" style={{ color: 'var(--text-muted)' }}>Términos y Condiciones</a>
           </div>
         </div>
 
