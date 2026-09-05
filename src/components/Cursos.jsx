@@ -612,7 +612,7 @@ export default function Cursos({ onOpenContact }) {
                         <span className="compact-price-val">{course.data40h.price}</span>
                       </div>
                       <a
-                        href={`https://wa.me/593964196795?text=${encodeURIComponent(`Hola BALUARTALENT & Co., tengo interés en el curso de 40 horas de "${course.title}"`)}`}
+                        href={`https://api.whatsapp.com/send?phone=593964196795&text=${encodeURIComponent(`Hola BALUARTALENT & Co., tengo interés en el curso de 40 horas de "${course.title}"`)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="compact-whatsapp-btn btn-wa-40h"
@@ -639,7 +639,7 @@ export default function Cursos({ onOpenContact }) {
                         </div>
                       </div>
                       <a
-                        href={`https://wa.me/593964196795?text=${encodeURIComponent(`Hola BALUARTALENT & Co., tengo interés en el curso de 8 horas de "${course.title}"`)}`}
+                        href={`https://api.whatsapp.com/send?phone=593964196795&text=${encodeURIComponent(`Hola BALUARTALENT & Co., tengo interés en el curso de 8 horas de "${course.title}"`)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="compact-whatsapp-btn btn-wa-8h"
@@ -740,7 +740,7 @@ export default function Cursos({ onOpenContact }) {
                     >
                       <span className="tab-clock-icon">⏱</span>
                       <span className="tab-duration-title">40 Horas</span>
-                      <span className="tab-badge-pill">Programa Completo</span>
+                      <span className="tab-badge-pill">Completo</span>
                     </button>
                     <button
                       type="button"
@@ -751,7 +751,7 @@ export default function Cursos({ onOpenContact }) {
                     >
                       <span className="tab-clock-icon">⚡</span>
                       <span className="tab-duration-title">8 Horas</span>
-                      <span className="tab-badge-pill">Taller Intensivo</span>
+                      <span className="tab-badge-pill">Intensivo</span>
                     </button>
                   </div>
                 </div>
@@ -922,7 +922,7 @@ export default function Cursos({ onOpenContact }) {
                     )}
 
                     <a
-                      href={`https://wa.me/593964196795?text=${encodeURIComponent(currentWhatsappText)}`}
+                      href={`https://api.whatsapp.com/send?phone=593964196795&text=${encodeURIComponent(currentWhatsappText)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn-modal-whatsapp"

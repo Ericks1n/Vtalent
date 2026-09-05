@@ -4575,6 +4575,10 @@ footer {
   background: #f8fafc;
   padding: 0.85rem 1.75rem;
   border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .course-modal-tabs-nav {
@@ -4583,11 +4587,14 @@ footer {
   background: #e2e8f0;
   padding: 0.35rem;
   border-radius: 50px;
-  max-width: 500px;
+  width: 100%;
+  max-width: 480px;
+  box-sizing: border-box;
 }
 
 .course-modal-tab-btn {
-  flex: 1;
+  flex: 1 1 0;
+  min-width: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4601,6 +4608,8 @@ footer {
   font-size: 0.84rem;
   font-weight: 700;
   cursor: pointer;
+  box-sizing: border-box;
+  white-space: nowrap;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -4616,11 +4625,13 @@ footer {
 
 .tab-clock-icon {
   font-size: 0.95rem;
+  flex-shrink: 0;
 }
 
 .tab-duration-title {
   font-size: 0.88rem;
   font-weight: 800;
+  white-space: nowrap;
 }
 
 .tab-badge-pill {
@@ -4632,6 +4643,8 @@ footer {
   border-radius: 50px;
   background: rgba(30, 64, 175, 0.08);
   color: var(--primary);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .course-modal-tab-btn.active .tab-badge-pill {
@@ -4996,8 +5009,14 @@ footer {
 
 /* Responsive Modal Rules */
 @media (max-width: 768px) {
+  .course-modal-overlay {
+    padding: 0.75rem;
+  }
+
   .course-modal-dialog {
     max-height: 94vh;
+    border-radius: 16px;
+    width: 100%;
   }
   
   .course-modal-hero {
@@ -5013,16 +5032,32 @@ footer {
   }
   
   .course-modal-tabs-container {
-    padding: 0.65rem 1.15rem;
+    padding: 0.65rem 0.85rem;
+    justify-content: center;
   }
   
   .course-modal-tabs-nav {
+    width: 100%;
     max-width: 100%;
+    gap: 0.35rem;
+    padding: 0.25rem;
   }
 
   .course-modal-tab-btn {
-    padding: 0.5rem 0.65rem;
+    flex: 1 1 50%;
+    min-width: 0;
+    padding: 0.48rem 0.45rem;
     font-size: 0.8rem;
+    gap: 0.35rem;
+  }
+
+  .tab-duration-title {
+    font-size: 0.84rem;
+  }
+
+  .tab-badge-pill {
+    font-size: 0.62rem;
+    padding: 0.12rem 0.4rem;
   }
 
   .course-modal-body {
@@ -5059,5 +5094,42 @@ footer {
     width: 100%;
     justify-content: center;
     text-align: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .course-modal-overlay {
+    padding: 0.5rem;
+  }
+
+  .course-modal-tabs-container {
+    padding: 0.5rem 0.65rem;
+  }
+
+  .course-modal-tabs-nav {
+    padding: 0.25rem;
+    gap: 0.25rem;
+  }
+
+  .course-modal-tab-btn {
+    padding: 0.45rem 0.35rem;
+    gap: 0.3rem;
+  }
+
+  .tab-clock-icon {
+    font-size: 0.85rem;
+  }
+
+  .tab-duration-title {
+    font-size: 0.82rem;
+    font-weight: 800;
+  }
+
+  .tab-badge-pill {
+    display: none;
+  }
+
+  .course-modal-stats-grid {
+    grid-template-columns: 1fr;
   }
 }

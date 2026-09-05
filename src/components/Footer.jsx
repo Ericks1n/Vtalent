@@ -6,7 +6,7 @@ export default function Footer() {
         {/* Footer Top WhatsApp Banner */}
         <div id="footer-contacto" className="footer-top">
           <h3>¿Necesitas asesoría en Recursos Humanos? Estamos para ayudarte.</h3>
-          <a href="https://wa.me/593964196795?text=Hola%20BALUARTALENT%20%26%20Co.,%20quisiera%20saber%20más%20sobre%20sus%20servicios%20de%20RRHH" className="btn btn-primary" target="_blank" rel="noopener noreferrer" style={{ background: '#25D366', boxShadow: '0 4px 15px rgba(37, 211, 102, 0.4)' }}>
+          <a href="https://api.whatsapp.com/send?phone=593964196795&text=Hola%20BALUARTALENT%20%26%20Co.,%20quisiera%20saber%20m%C3%A1s%20sobre%20sus%20servicios%20de%20RRHH" className="btn btn-primary" target="_blank" rel="noopener noreferrer" style={{ background: '#25D366', boxShadow: '0 4px 15px rgba(37, 211, 102, 0.4)' }}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ fill: 'currentColor' }}>
               <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
             </svg>
@@ -87,7 +87,14 @@ export default function Footer() {
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, color: '#25D366' }}>
                   <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
                 </svg>
-                <span>WhatsApp: <a href="https://wa.me/593964196795" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', fontWeight: '600' }}>0964196795</a></span>
+                <span>WhatsApp: <a href="https://api.whatsapp.com/send?phone=593964196795" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', fontWeight: '600' }}>0964196795</a></span>
+              </li>
+              <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, color: 'var(--primary)' }}>
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Email: <a href="mailto:info@baluartalent.com" style={{ color: 'inherit', fontWeight: '500' }}>info@baluartalent.com</a></span>
               </li>
             </ul>
           </div>

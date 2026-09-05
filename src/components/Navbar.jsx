@@ -71,7 +71,7 @@ export default function Navbar({ onOpenContact }) {
           <div className="top-bar-contact">
             <span>¿Preguntas?</span>
             <span className="separator">|</span>
-            <a href="mailto:administrator@baluartalent.com">administrator@baluartalent.com</a>
+            <a href="mailto:info@baluartalent.com">info@baluartalent.com</a>
             <span className="separator">|</span>
             <a href="https://aula.baluartalent.com" target="_blank" rel="noopener noreferrer">Cursos Aula Virtual</a>
           </div>
@@ -161,7 +161,7 @@ export default function Navbar({ onOpenContact }) {
             <li className="mobile-only-menu-section">
               <span className="mobile-section-title">Contacto Rápido</span>
               <div className="mobile-contact-info">
-                <a href="mailto:administrator@baluartalent.com" className="mobile-contact-link">administrator@baluartalent.com</a>
+                <a href="mailto:info@baluartalent.com" className="mobile-contact-link">info@baluartalent.com</a>
                 <a href="tel:+59323617038" className="mobile-contact-link">Telf: (+593) 2 3617038</a>
                 <a href="tel:+593964196795" className="mobile-contact-link">Cel: 0964196795</a>
               </div>
